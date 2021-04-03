@@ -266,22 +266,19 @@ public class OfflineDownloadService extends Service {
 		OfflineArticlesRequest req = new OfflineArticlesRequest(this);
 		
 		@SuppressWarnings("serial")
-		HashMap<String,String> map = new HashMap<String,String>() {
-			{
-				put("op", "getHeadlines");
-				put("sid", m_sessionId);
-				put("feed_id", "-4");
+		HashMap<String,String> map = new HashMap<String,String>();
+		map.put("op", "getHeadlines");
+		map.put("sid", m_sessionId);
+		map.put("feed_id", "-4");
 
-				if (BuildConfig.DEBUG && OFFLINE_DEBUG_READ) {
-					put("view_mode", "all_articles");
-				} else {
-					put("view_mode", "unread");
-				}
-				put("show_content", "true");
-				put("skip", String.valueOf(m_articleOffset));
-				put("limit", String.valueOf(OFFLINE_SYNC_SEQ));
-			}			 
-		};
+		if (BuildConfig.DEBUG && OFFLINE_DEBUG_READ) {
+			map.put("view_mode", "all_articles");
+		} else {
+			map.put("view_mode", "unread");
+		}
+		map.put("show_content", "true");
+		map.put("skip", String.valueOf(m_articleOffset));
+		map.put("limit", String.valueOf(OFFLINE_SYNC_SEQ));
 		
 		req.execute(map);
 	}
@@ -351,17 +348,14 @@ public class OfflineDownloadService extends Service {
 		};
 		
 		@SuppressWarnings("serial")
-		HashMap<String,String> map = new HashMap<String,String>() {
-			{
-				put("op", "getFeeds");
-				put("sid", m_sessionId);
-				put("cat_id", "-3");
+		HashMap<String,String> map = new HashMap<String,String>();
+		map.put("op", "getFeeds");
+		map.put("sid", m_sessionId);
+		map.put("cat_id", "-3");
 
-				if (!BuildConfig.DEBUG && OFFLINE_DEBUG_READ) {
-					put("unread_only", "true");
-				}
-			}			 
-		};
+		if (!BuildConfig.DEBUG && OFFLINE_DEBUG_READ) {
+			map.put("unread_only", "true");
+		}
 		
 		req.execute(map);
 	}
@@ -422,17 +416,14 @@ public class OfflineDownloadService extends Service {
 		};
 		
 		@SuppressWarnings("serial")
-		HashMap<String,String> map = new HashMap<String,String>() {
-			{
-				put("op", "getCategories");
-				put("sid", m_sessionId);
-				//put("cat_id", "-3");
+		HashMap<String,String> map = new HashMap<String,String>();
+		map.put("op", "getCategories");
+		map.put("sid", m_sessionId);
+		//put("cat_id", "-3");
 
-				if (!BuildConfig.DEBUG && OFFLINE_DEBUG_READ) {
-					put("unread_only", "true");
-				}
-			}			 
-		};
+		if (!BuildConfig.DEBUG && OFFLINE_DEBUG_READ) {
+			map.put("unread_only", "true");
+		}
 		
 		req.execute(map);
 	}

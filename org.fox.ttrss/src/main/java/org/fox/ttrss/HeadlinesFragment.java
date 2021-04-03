@@ -649,48 +649,45 @@ public class HeadlinesFragment extends StateSavedFragment {
 
 			req.setOffset(skip);
 
-			HashMap<String,String> map = new HashMap<String,String>() {
-				{
-					put("op", "getHeadlines");
-					put("sid", sessionId);
-					put("feed_id", String.valueOf(m_feed.id));
-                    put("show_excerpt", "true");
-                    put("excerpt_length", String.valueOf(CommonActivity.EXCERPT_MAX_LENGTH));
-					put("show_content", "true");
-					put("include_attachments", "true");
-					put("view_mode", m_activity.getViewMode());
-					put("limit", m_prefs.getString("headlines_request_size", "15"));
-					put("offset", String.valueOf(0));
-					put("skip", String.valueOf(fskip));
-					put("include_nested", "true");
-                    put("has_sandbox", "true");
-					put("order_by", m_activity.getSortMode());
+			HashMap<String,String> map = new HashMap<String,String>();
+			map.put("op", "getHeadlines");
+			map.put("sid", sessionId);
+			map.put("feed_id", String.valueOf(m_feed.id));
+			map.put("show_excerpt", "true");
+			map.put("excerpt_length", String.valueOf(CommonActivity.EXCERPT_MAX_LENGTH));
+			map.put("show_content", "true");
+			map.put("include_attachments", "true");
+			map.put("view_mode", m_activity.getViewMode());
+			map.put("limit", m_prefs.getString("headlines_request_size", "15"));
+			map.put("offset", String.valueOf(0));
+			map.put("skip", String.valueOf(fskip));
+			map.put("include_nested", "true");
+			map.put("has_sandbox", "true");
+			map.put("order_by", m_activity.getSortMode());
 
-					if (m_prefs.getBoolean("enable_image_downsampling", false)) {
-						if (m_prefs.getBoolean("always_downsample_images", false) || !m_activity.isWifiConnected()) {
-							put("resize_width", String.valueOf(m_activity.getResizeWidth()));
-						}
-					}
-
-					if (isCat) put("is_cat", "true");
-
-					if (allowForceUpdate) {
-						put("force_update", "true");
-					}
-
-					if (m_searchQuery != null && m_searchQuery.length() != 0) {
-						put("search", m_searchQuery);
-						put("search_mode", "");
-						put("match_on", "both");
-					}
-
-					if (m_firstId > 0) put("check_first_id", String.valueOf(m_firstId));
-
-					if (m_activity.getApiLevel() >= 12) {
-						put("include_header", "true");
-					}
+			if (m_prefs.getBoolean("enable_image_downsampling", false)) {
+				if (m_prefs.getBoolean("always_downsample_images", false) || !m_activity.isWifiConnected()) {
+					map.put("resize_width", String.valueOf(m_activity.getResizeWidth()));
 				}
-			};
+			}
+
+			if (isCat) map.put("is_cat", "true");
+
+			if (allowForceUpdate) {
+				map.put("force_update", "true");
+			}
+
+			if (m_searchQuery != null && m_searchQuery.length() != 0) {
+				map.put("search", m_searchQuery);
+				map.put("search_mode", "");
+				map.put("match_on", "both");
+			}
+
+			if (m_firstId > 0) map.put("check_first_id", String.valueOf(m_firstId));
+
+			if (m_activity.getApiLevel() >= 12) {
+				map.put("include_header", "true");
+			}
 
             Log.d(TAG, "[HP] request more headlines, firstId=" + m_firstId);
 

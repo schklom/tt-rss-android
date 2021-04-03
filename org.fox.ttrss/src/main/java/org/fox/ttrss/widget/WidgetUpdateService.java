@@ -124,13 +124,10 @@ public class WidgetUpdateService extends JobIntentService {
 
                         final String fSessionId = sessionId;
 
-                        HashMap<String, String> umap = new HashMap<String, String>() {
-                            {
-                                put("op", "getUnread");
-                                put("feed_id", String.valueOf(feedId));
-                                put("sid", fSessionId);
-                            }
-                        };
+                        HashMap<String, String> umap = new HashMap<String, String>();
+                        umap.put("op", "getUnread");
+                        umap.put("feed_id", String.valueOf(feedId));
+                        umap.put("sid", fSessionId);
 
                         aru.execute(umap);
                     }

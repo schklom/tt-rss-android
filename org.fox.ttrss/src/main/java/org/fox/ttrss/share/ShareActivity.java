@@ -112,15 +112,12 @@ public class ShareActivity extends CommonShareActivity {
 		final EditText content = (EditText) findViewById(R.id.content);			
 
 		if (url != null && title != null && content != null) {
-			HashMap<String, String> map = new HashMap<String, String>() {
-				{
-					put("sid", m_sessionId);
-					put("op", "shareToPublished");
-					put("title", title.getText().toString());
-					put("url", url.getText().toString());
-					put("content", content.getText().toString());
-				}
-			};
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("sid", m_sessionId);
+			map.put("op", "shareToPublished");
+			map.put("title", title.getText().toString());
+			map.put("url", url.getText().toString());
+			map.put("content", content.getText().toString());
 
 			setProgressBarIndeterminateVisibility(true);
 

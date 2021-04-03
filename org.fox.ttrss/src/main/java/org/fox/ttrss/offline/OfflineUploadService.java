@@ -196,36 +196,33 @@ public class OfflineUploadService extends IntentService {
 			};
 
 			@SuppressWarnings("serial")
-			HashMap<String, String> map = new HashMap<String, String>() {
-				{
-					put("sid", m_sessionId);
-					put("op", "updateArticle");
-					put("article_ids", android.text.TextUtils.join(",", ids));
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("sid", m_sessionId);
+			map.put("op", "updateArticle");
+			map.put("article_ids", android.text.TextUtils.join(",", ids));
 
-					switch (criteria) {
-						case READ:
-							put("mode", "0");
-							put("field", "2");
-							break;
-						case PUBLISHED:
-							put("mode", "1");
-							put("field", "1");
-							break;
-						case UNPUBLISHED:
-							put("mode", "0");
-							put("field", "1");
-							break;
-						case MARKED:
-							put("mode", "1");
-							put("field", "0");
-							break;
-						case UNMARKED:
-							put("mode", "0");
-							put("field", "0");
-							break;
-					}
-				}
-			};
+			switch (criteria) {
+				case READ:
+					map.put("mode", "0");
+					map.put("field", "2");
+					break;
+				case PUBLISHED:
+					map.put("mode", "1");
+					map.put("field", "1");
+					break;
+				case UNPUBLISHED:
+					map.put("mode", "0");
+					map.put("field", "1");
+					break;
+				case MARKED:
+					map.put("mode", "1");
+					map.put("field", "0");
+					break;
+				case UNMARKED:
+					map.put("mode", "0");
+					map.put("field", "0");
+					break;
+			}
 
 			req.execute(map);
 		} else {
