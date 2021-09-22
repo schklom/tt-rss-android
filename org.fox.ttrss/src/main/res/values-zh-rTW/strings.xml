@@ -209,4 +209,23 @@
     <string name="subscribed_to_feed">已訂閱摘要</string>
     <string name="prefs_headline_images_wifi_only_long">覆寫先前的設定</string>
     <string name="prefs_always_open_uri">一律在瀏覽器中開啟</string>
+    <string name="offline_media_cache_enabled">快取媒體檔案</string>
+    <string name="notify_downloading_media">正在下載媒體檔案……</string>
+    <string name="dialog_offline_go">進入離線模式</string>
+    <string name="notify_downloading_title">正在準備離線模式</string>
+    <string name="offline_switch_failed">無法準備離線模式</string>
+    <string name="notify_uploading_title">正在同步離線資料</string>
+    <string name="offline_no_articles">沒有文章被下載</string>
+    <string name="offline_tap_to_switch">輕觸即可切換至離線模式</string>
+    <string name="article_img_view_caption">檢視影像標題</string>
+    <string name="headline_display_mode_compact_noimages">精簡（沒有影像）</string>
+    <string name="headline_display_mode_compact">精簡</string>
+    <plurals name="n_unread_articles">
+        <item quantity="other">%1$d 篇未讀文章</item>
+    </plurals>
+    <string name="prefs_headline_display_mode">顯示模式</string>
+    <string name="dialog_offline_success">離線模式已就緒</string>
+    <string name="offline_sync_success">同步離線資料完成</string>
+    <string name="prefs_headline_display_mode_long">預設／沒有影像／精簡模式</string>
+    <string name="headline_display_mode_no_images">沒有影像</string>
 </resources>
