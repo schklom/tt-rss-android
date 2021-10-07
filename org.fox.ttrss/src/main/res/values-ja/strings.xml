@@ -133,7 +133,7 @@
     <string name="trial_expired_message">Tiny Tiny RSSを継続して使用する場合はTiny Tiny RSS Unlockerを購入してください。</string>
     <string name="theme_sepia">セピア</string>
     <string name="theme_amber">アンバー</string>
-    <string name="reading">Reading</string>
+    <string name="reading">読む</string>
     <string name="offline_articles_to_download">ダウンロードする記事数</string>
     <string name="offline_articles_to_download_long">オフラインモードにする際にダウンロードする記事数(新しい記事から)</string>
     <string name="pref_headlines_show_content_long">記事内容をヘッドライン一覧に表示する</string>
@@ -202,6 +202,10 @@
     <string name="headlines_sort_articles_title">記事の並び替え</string>
     <string name="fresh_articles">新着記事</string>
     <string name="feed_all_articles">全ての記事</string>
+    <string name="feed_starred_articles">スター付きの記事</string>
+    <string name="feed_published_articles">配信した記事</string>
+    <string name="feed_archived_articles">アーカイブした記事</string>
+    <string name="feed_recently_read">最近読んだ</string>
     <string name="prefs_enable_fab">FABを有効にする</string>
     <string name="prefs_enable_fab_long">フローティングアクションボタンを表示する</string>
     <string name="prefs_open_fresh_on_startup">起動時に新着記事を表示する</string>
@@ -218,4 +222,8 @@
     <string name="prefs_widget_show_fresh">新着記事数を表示</string>
     <string name="prefs_widget_show_fresh_summary">全未読記事数の代わりに新着記事数を表示する</string>
     <string name="prefs_widget">ウィジェット</string>
+    <string name="prefs_network_settings">その他の設定…</string>
+    <string name="prefs_opening_links">リンクを開く</string>
+    <string name="open_with">で開く…</string>
+    <string name="headlines">ヘッドライン</string>
 </resources>
