@@ -239,17 +239,14 @@ public class SubscribeActivity extends CommonShareActivity {
 		final EditText feedUrl = (EditText) findViewById(R.id.feed_url);
 
 		if (feedUrl != null ) {
-			HashMap<String, String> map = new HashMap<String, String>() {
-				{
-					put("sid", m_sessionId);
-					put("op", "subscribeToFeed");
-					put("feed_url", feedUrl.getText().toString());
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("sid", m_sessionId);
+			map.put("op", "subscribeToFeed");
+			map.put("feed_url", feedUrl.getText().toString());
 
-					if (cat != null) {
-						put("category_id", String.valueOf(cat.id));
-					}
-				}
-			};
+			if (cat != null) {
+				map.put("category_id", String.valueOf(cat.id));
+			}
 
 			m_progressBar.setVisibility(View.VISIBLE);
 			
@@ -304,12 +301,9 @@ public class SubscribeActivity extends CommonShareActivity {
 			}
 		};
 
-		HashMap<String, String> map = new HashMap<String, String>() {
-			{
-				put("sid", m_sessionId);
-				put("op", "getCategories");
-			}
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("sid", m_sessionId);
+		map.put("op", "getCategories");
 
 		m_progressBar.setVisibility(View.VISIBLE);
 			

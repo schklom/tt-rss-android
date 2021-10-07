@@ -62,16 +62,13 @@ public class FeedCategoriesFragment extends BaseFeedlistFragment implements OnIt
 		final boolean unreadOnly = m_activity.getUnreadOnly();
 
 		@SuppressWarnings("serial")
-		HashMap<String, String> params = new HashMap<String, String>() {
-			{
-				put("op", "getCategories");
-				put("sid", sessionId);
-				put("enable_nested", "true");
-				if (unreadOnly) {
-					put("unread_only", String.valueOf(unreadOnly));
-				}
-			}
-		};
+		HashMap<String, String> params = new HashMap<String, String>();
+		params.put("op", "getCategories");
+		params.put("sid", sessionId);
+		params.put("enable_nested", "true");
+		if (unreadOnly) {
+			params.put("unread_only", String.valueOf(unreadOnly));
+		}
 
 		return new ApiLoader(getContext(), params);
 	}

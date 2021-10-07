@@ -407,13 +407,10 @@ public class OnlineActivity extends CommonActivity {
 			
 			LoginRequest ar = new LoginRequest(getApplicationContext(), refresh, listener);
 
-			HashMap<String, String> map = new HashMap<String, String>() {
-				{
-					put("op", "login");
-					put("user", m_prefs.getString("login", "").trim());
-					put("password", m_prefs.getString("password", "").trim());
-				}
-			};
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("op", "login");
+			map.put("user", m_prefs.getString("login", "").trim());
+			map.put("password", m_prefs.getString("password", "").trim());
 
 			ar.execute(map);
 
@@ -1057,15 +1054,12 @@ public class OnlineActivity extends CommonActivity {
 									final int labelId = itemIds[which];
 									
 									@SuppressWarnings("serial")
-									HashMap<String, String> map = new HashMap<String, String>() {
-										{
-											put("sid", getSessionId());
-											put("op", "setArticleLabel");
-											put("label_id", String.valueOf(labelId));
-											put("article_ids", String.valueOf(articleId));
-											if (isChecked) put("assign", "true");
-										}
-									};
+									HashMap<String, String> map = new HashMap<String, String>();
+									map.put("sid", getSessionId());
+									map.put("op", "setArticleLabel");
+									map.put("label_id", String.valueOf(labelId));
+									map.put("article_ids", String.valueOf(articleId));
+									if (isChecked) map.put("assign", "true");
 									
 									ApiRequest req = new ApiRequest(OnlineActivity.this);
 									req.execute(map);
@@ -1087,13 +1081,10 @@ public class OnlineActivity extends CommonActivity {
 		};
 		
 		@SuppressWarnings("serial")
-		HashMap<String, String> map = new HashMap<String, String>() {
-			{
-				put("sid", getSessionId());
-				put("op", "getLabels");
-				put("article_id", String.valueOf(articleId));
-			}
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("sid", getSessionId());
+		map.put("op", "getLabels");
+		map.put("article_id", String.valueOf(articleId));
 		
 		req.execute(map);
 	}
@@ -1213,15 +1204,12 @@ public class OnlineActivity extends CommonActivity {
 			}
 		};
 
-		HashMap<String, String> map = new HashMap<String, String>() {
-			{
-				put("sid", getSessionId());
-				put("op", "updateArticle");
-				put("article_ids", String.valueOf(article.id));
-				put("mode", article.unread ? "1" : "0");
-				put("field", "2");
-			}
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("sid", getSessionId());
+		map.put("op", "updateArticle");
+		map.put("article_ids", String.valueOf(article.id));
+		map.put("mode", article.unread ? "1" : "0");
+		map.put("field", "2");
 
 		req.execute(map);
 	}
@@ -1234,15 +1222,12 @@ public class OnlineActivity extends CommonActivity {
 			}
 		};
 
-		HashMap<String, String> map = new HashMap<String, String>() {
-			{
-				put("sid", getSessionId());
-				put("op", "updateArticle");
-				put("article_ids", String.valueOf(article.id));
-				put("data", String.valueOf(article.score));
-				put("field", "4");
-			}
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("sid", getSessionId());
+		map.put("op", "updateArticle");
+		map.put("article_ids", String.valueOf(article.id));
+		map.put("data", String.valueOf(article.score));
+		map.put("field", "4");
 
 		req.execute(map);
 	}
@@ -1255,15 +1240,12 @@ public class OnlineActivity extends CommonActivity {
 			}
 		};
 
-		HashMap<String, String> map = new HashMap<String, String>() {
-			{
-				put("sid", getSessionId());
-				put("op", "updateArticle");
-				put("article_ids", String.valueOf(article.id));
-				put("mode", article.marked ? "1" : "0");
-				put("field", "0");
-			}
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("sid", getSessionId());
+		map.put("op", "updateArticle");
+		map.put("article_ids", String.valueOf(article.id));
+		map.put("mode", article.marked ? "1" : "0");
+		map.put("field", "0");
 		
 		req.execute(map);
 	}
@@ -1278,15 +1260,12 @@ public class OnlineActivity extends CommonActivity {
 			}
 		};
 
-		HashMap<String, String> map = new HashMap<String, String>() {
-			{
-				put("sid", getSessionId());
-				put("op", "updateArticle");
-				put("article_ids", String.valueOf(article.id));
-				put("mode", article.published ? "1" : "0");
-				put("field", "1");
-			}
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("sid", getSessionId());
+		map.put("op", "updateArticle");
+		map.put("article_ids", String.valueOf(article.id));
+		map.put("mode", article.published ? "1" : "0");
+		map.put("field", "1");
 
 		req.execute(map);
 	}
@@ -1299,16 +1278,13 @@ public class OnlineActivity extends CommonActivity {
 			}
 		};
 
-		HashMap<String, String> map = new HashMap<String, String>() {
-			{
-				put("sid", getSessionId());
-				put("op", "updateArticle");
-				put("article_ids", String.valueOf(article.id));
-				put("mode", "1");
-				put("data", note);
-				put("field", "3");
-			}
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("sid", getSessionId());
+		map.put("op", "updateArticle");
+		map.put("article_ids", String.valueOf(article.id));
+		map.put("mode", "1");
+		map.put("data", note);
+		map.put("field", "3");
 
 		req.execute(map);
 	}
@@ -1411,16 +1387,13 @@ public class OnlineActivity extends CommonActivity {
 		};
 
 		@SuppressWarnings("serial")
-		HashMap<String, String> map = new HashMap<String, String>() {
-			{
-				put("sid", getSessionId());
-				put("op", "catchupFeed");
-				put("feed_id", String.valueOf(feed.id));
-				put("mode", mode);
-				if (feed.is_cat)
-					put("is_cat", "1");
-			}
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("sid", getSessionId());
+		map.put("op", "catchupFeed");
+		map.put("feed_id", String.valueOf(feed.id));
+		map.put("mode", mode);
+		if (feed.is_cat)
+			map.put("is_cat", "1");
 
 		req.execute(map);
 	}
@@ -1429,15 +1402,12 @@ public class OnlineActivity extends CommonActivity {
 		ApiRequest req = new ApiRequest(getApplicationContext());
 
 		@SuppressWarnings("serial")
-		HashMap<String, String> map = new HashMap<String, String>() {
-			{
-				put("sid", getSessionId());
-				put("op", "updateArticle");
-				put("article_ids", articlesToIdString(articles));
-				put("mode", "2");
-				put("field", "0");
-			}
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("sid", getSessionId());
+		map.put("op", "updateArticle");
+		map.put("article_ids", articlesToIdString(articles));
+		map.put("mode", "2");
+		map.put("field", "0");
 
 		req.execute(map);
 	}
@@ -1446,15 +1416,12 @@ public class OnlineActivity extends CommonActivity {
 		ApiRequest req = new ApiRequest(getApplicationContext());
 
 		@SuppressWarnings("serial")
-		HashMap<String, String> map = new HashMap<String, String>() {
-			{
-				put("sid", getSessionId());
-				put("op", "updateArticle");
-				put("article_ids", articlesToIdString(articles));
-				put("mode", "2");
-				put("field", "2");
-			}
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("sid", getSessionId());
+		map.put("op", "updateArticle");
+		map.put("article_ids", articlesToIdString(articles));
+		map.put("mode", "2");
+		map.put("field", "2");
 
 		req.execute(map);
 		//refresh();
@@ -1464,15 +1431,12 @@ public class OnlineActivity extends CommonActivity {
 		ApiRequest req = new ApiRequest(getApplicationContext());
 
 		@SuppressWarnings("serial")
-		HashMap<String, String> map = new HashMap<String, String>() {
-			{
-				put("sid", getSessionId());
-				put("op", "updateArticle");
-				put("article_ids", articlesToIdString(articles));
-				put("mode", "2");
-				put("field", "1");
-			}
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("sid", getSessionId());
+		map.put("op", "updateArticle");
+		map.put("article_ids", articlesToIdString(articles));
+		map.put("mode", "2");
+		map.put("field", "1");
 
 		req.execute(map);
 	}
@@ -1660,12 +1624,9 @@ public class OnlineActivity extends CommonActivity {
 							};
 	
 							@SuppressWarnings("serial")
-							HashMap<String, String> map = new HashMap<String, String>() {
-								{
-									put("sid", getSessionId());
-									put("op", "getApiLevel");
-								}
-							};
+							HashMap<String, String> map = new HashMap<String, String>();
+							map.put("sid", getSessionId());
+							map.put("op", "getApiLevel");
 	
 							req.execute(map);
 	

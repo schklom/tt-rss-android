@@ -160,13 +160,10 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 					}
 				});
 				
-				HashMap<String, String> map = new HashMap<String, String>() {
-					{
-						put("op", "login");
-						put("user", m_prefs.getString("login", "").trim());
-						put("password", m_prefs.getString("password", "").trim());
-					}
-				};
+				HashMap<String, String> map = new HashMap<String, String>();
+				map.put("op", "login");
+				map.put("user", m_prefs.getString("login", "").trim());
+				map.put("password", m_prefs.getString("password", "").trim());
 
 				lr.execute(map);
 			}
@@ -611,13 +608,10 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 		};
 
 		@SuppressWarnings("serial")
-		HashMap<String, String> map = new HashMap<String, String>() {
-			{
-				put("sid", getSessionId());
-				put("op", "unsubscribeFeed");
-				put("feed_id", String.valueOf(feed.id));
-			}
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("sid", getSessionId());
+		map.put("op", "unsubscribeFeed");
+		map.put("feed_id", String.valueOf(feed.id));
 		
 		req.execute(map);
 

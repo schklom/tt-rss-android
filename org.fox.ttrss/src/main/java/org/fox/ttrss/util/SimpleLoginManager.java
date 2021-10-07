@@ -56,12 +56,9 @@ public abstract class SimpleLoginManager {
 						};
 
 						@SuppressWarnings("serial")
-						HashMap<String, String> map = new HashMap<String, String>() {
-							{
-								put("sid", m_sessionId);
-								put("op", "getApiLevel");
-							}
-						};
+						HashMap<String, String> map = new HashMap<String, String>();
+						map.put("sid", m_sessionId);
+						map.put("op", "getApiLevel");
 
 						req.execute(map);
 
@@ -83,13 +80,10 @@ public abstract class SimpleLoginManager {
 	public void logIn(Context context, int requestId, final String login, final String password) {
 		LoginRequest ar = new LoginRequest(context, requestId); 
 
-		HashMap<String, String> map = new HashMap<String, String>() {
-			{
-				put("op", "login");
-				put("user", login.trim());
-				put("password", password.trim());
-			}
-		};
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("op", "login");
+		map.put("user", login.trim());
+		map.put("password", password.trim());
 
 		onLoggingIn(requestId);
 		

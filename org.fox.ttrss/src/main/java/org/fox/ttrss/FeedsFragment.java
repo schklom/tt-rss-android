@@ -77,17 +77,14 @@ public class FeedsFragment extends BaseFeedlistFragment implements OnItemClickLi
 		final String sessionId = m_activity.getSessionId();
 		final boolean unreadOnly = m_activity.getUnreadOnly() && (m_activeCategory == null || m_activeCategory.id != -1);
 
-		HashMap<String,String> params = new HashMap<String,String>() {
-			{
-				put("op", "getFeeds");
-				put("sid", sessionId);
-				put("include_nested", "true");
-				put("cat_id", String.valueOf(catId));
-				if (unreadOnly) {
-					put("unread_only", String.valueOf(unreadOnly));
-				}
-			}
-		};
+		HashMap<String,String> params = new HashMap<String,String>();
+		params.put("op", "getFeeds");
+		params.put("sid", sessionId);
+		params.put("include_nested", "true");
+		params.put("cat_id", String.valueOf(catId));
+		if (unreadOnly) {
+			params.put("unread_only", String.valueOf(unreadOnly));
+		}
 
 		return new FeedsLoader(getActivity().getApplicationContext(), params, catId);
 	}

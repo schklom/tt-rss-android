@@ -75,12 +75,9 @@ public class DashClock extends DashClockExtension {
 				
 				final String fSessionId = sessionId;
 				
-				HashMap<String, String> umap = new HashMap<String, String>() {
-		   				{
-		   					put("op", "getUnread");
-		   					put("sid", fSessionId);
-		   				}
-		   			};
+				HashMap<String, String> umap = new HashMap<String, String>();
+				umap.put("op", "getUnread");
+				umap.put("sid", fSessionId);
 
 					aru.execute(umap);
 			}
