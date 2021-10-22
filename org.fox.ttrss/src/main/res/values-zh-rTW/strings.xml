@@ -228,4 +228,5 @@
     <string name="offline_sync_success">同步離線資料完成</string>
     <string name="prefs_headline_display_mode_long">預設／沒有影像／精簡模式</string>
     <string name="headline_display_mode_no_images">沒有影像</string>
+    <string name="pref_headlines_show_content">顯示內容預覽</string>
 </resources>
