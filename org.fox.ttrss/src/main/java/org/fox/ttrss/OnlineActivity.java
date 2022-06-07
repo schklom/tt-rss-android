@@ -420,23 +420,6 @@ public class OnlineActivity extends CommonActivity {
 		finish();
 	}
 
-	private void openUnlockUrl() {
-		try {
-			Intent intent = new Intent(Intent.ACTION_VIEW, 
-				Uri.parse("market://details?id=org.fox.ttrss.key"));
-			startActivity(intent);
-		} catch (ActivityNotFoundException ae) {
-			try {
-				Intent intent = new Intent(Intent.ACTION_VIEW, 
-					Uri.parse("https://play.google.com/store/apps/details?id=org.fox.ttrss.key"));
-				startActivity(intent);
-			} catch (Exception e) {
-				e.printStackTrace();
-				toast(R.string.error_other_error);
-			}
-		}
-	}
-	
 	@Override
 	public boolean onContextItemSelected(android.view.MenuItem item) {
 		/* AdapterContextMenuInfo info = (AdapterContextMenuInfo) item
