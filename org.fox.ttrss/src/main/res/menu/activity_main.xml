@@ -77,12 +77,6 @@
 
         </group>
 
-        <item
-            android:id="@+id/donate"
-            android:orderInCategory="899"
-            app:showAsAction=""
-            android:title="@string/trial_purchase"/>
-
         <!-- <item
             android:orderInCategory="999"
             android:id="@+id/preferences"

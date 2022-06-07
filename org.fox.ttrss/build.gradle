@@ -7,7 +7,6 @@ android {
     defaultConfig {
         applicationId "org.fox.ttrss"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
-        buildConfigField "boolean", "ENABLE_TRIAL", "true"
         buildConfigField "boolean", "ENABLE_UPDATER", "false"
         minSdkVersion 16
         targetSdkVersion 29
@@ -40,7 +39,6 @@ android {
             minifyEnabled  false
             versionNameSuffix "-fdroid"
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-            buildConfigField "boolean", "ENABLE_TRIAL", "false"
             buildConfigField "boolean", "ENABLE_UPDATER", "true"
             signingConfig signingConfigs.fdroid
             matchingFallbacks = ['release']
