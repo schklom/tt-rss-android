@@ -137,9 +137,9 @@ public class ArticleFragment extends StateSavedFragment  {
 				getActivity().getMenuInflater().inflate(R.menu.content_gallery_entry, menu);
 
 				/* FIXME I have no idea how to do this correctly ;( */
-				
+
 				m_activity.setLastContentImageHitTestUrl(result.getExtra());
-				
+
 			} else {
 				menu.setHeaderTitle(m_article.title);
 				getActivity().getMenuInflater().inflate(R.menu.context_article_link, menu);
@@ -148,7 +148,7 @@ public class ArticleFragment extends StateSavedFragment  {
 			menu.setHeaderTitle(m_article.title);
 			getActivity().getMenuInflater().inflate(R.menu.context_article_link, menu);
 		}
-		
+
 		super.onCreateContextMenu(menu, v, menuInfo);
 
 	}
@@ -509,7 +509,7 @@ public class ArticleFragment extends StateSavedFragment  {
                 cssOverride +
                 "</style>" +
                 "</head>" +
-                "<body dir="auto">");
+                "<body dir='auto'>");
 
         content.append(articleContent);
 
@@ -602,13 +602,13 @@ public class ArticleFragment extends StateSavedFragment  {
 
 	@Override
 	public void onDestroy() {
-		super.onDestroy();		
+		super.onDestroy();
 	}
-	
+
 	@Override
 	public void onAttach(Activity activity) {
-		super.onAttach(activity);		
-		
+		super.onAttach(activity);
+
 		m_prefs = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
 		m_activity = (DetailActivity)activity;
 
