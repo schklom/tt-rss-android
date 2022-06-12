@@ -509,7 +509,7 @@ public class ArticleFragment extends StateSavedFragment  {
                 cssOverride +
                 "</style>" +
                 "</head>" +
-                "<body>");
+                "<body dir="auto">");
 
         content.append(articleContent);
 
