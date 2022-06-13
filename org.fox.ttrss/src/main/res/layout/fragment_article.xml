@@ -1,5 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/article_fragment"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
@@ -42,8 +43,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:textAlignment="viewStart"
+                        tools:text="Unreasonably long article title blah blah blah blah blah blah"
                         android:textColor="?articleHeaderTextColor"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="start" />
 
                     <ImageView
                         android:id="@+id/score"
@@ -54,7 +60,7 @@
                         android:clickable="true"
                         android:layout_marginLeft="8dp"
                         android:src="?ic_action_trending_flat"
-                        android:layout_gravity="center_vertical|right" />
+                        android:layout_gravity="center_vertical|end" />
 
                     <ImageView
                         android:id="@+id/attachments"
@@ -65,7 +71,7 @@
                         android:layout_marginLeft="8dp"
                         android:clickable="true"
                         android:src="?ic_attachment_vert"
-                        android:layout_gravity="center_vertical|right" />
+                        android:layout_gravity="center_vertical|end" />
 
                     <ImageView
                         android:id="@+id/share"
@@ -73,17 +79,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="24dp"
                         android:layout_weight="0"
-                        android:layout_marginLeft="8dp"
                         android:clickable="true"
                         android:src="?ic_share"
-                        android:layout_gravity="center_vertical|right" />
+                        android:layout_gravity="center_vertical|end" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/comments"
+                    tools:text="comments"
                     android:background="@drawable/ripple"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-light"
                     android:paddingTop="8dp"
@@ -98,10 +105,12 @@
 
                     <TextView
                         android:id="@+id/tags"
-                        android:layout_width="wrap_content"
+                        tools:text="alpha, beta, gamma"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="0.7"
                         android:ellipsize="middle"
+                        android:textAlignment="viewStart"
                         android:singleLine="true"
                         android:fontFamily="sans-serif-light"
                         android:textColor="?headlineSecondaryTextColor"
@@ -109,11 +118,12 @@
 
                     <TextView
                         android:id="@+id/date"
-                        android:layout_width="wrap_content"
+                        tools:text="Jan 01, 1970"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:gravity="right"
-                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.3"
+                        android:gravity=""
+                        android:textAlignment="viewEnd"
                         android:fontFamily="sans-serif-light"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textColor="?headlineSecondaryTextColor"
@@ -146,6 +156,7 @@
 
                 <TextView
                     android:id="@+id/note"
+                    tools:text="Article note (if any...)"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

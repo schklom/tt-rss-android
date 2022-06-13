@@ -82,19 +82,20 @@
 
                         <TextView
                             android:id="@+id/title"
-                            android:background="@drawable/ripple"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_span="2"
+                            android:background="@drawable/ripple"
+                            android:ellipsize="end"
                             android:gravity="center_vertical"
+                            android:maxLines="3"
                             android:paddingBottom="8dp"
                             android:singleLine="false"
-                            android:text="Sample entry title"
+                            android:textAlignment="viewStart"
                             android:textColor="?headlineUnreadTextColor"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:ellipsize="end"
-                            android:maxLines="3" />
+                            tools:text="Sample entry title" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -108,11 +109,12 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.5"
-                                android:ellipsize="end"
+                                android:ellipsize="middle"
                                 android:fontFamily="sans-serif-light"
                                 android:gravity="center_vertical"
+                                android:textAlignment="viewStart"
                                 android:singleLine="true"
-                                tools:text="Example Feed AAA AAA AAAAAA AAAA AAAAA AA A A AA AA"
+                                tools:text="Example Feed"
                                 android:textColor="?headlineSecondaryTextColor"
                                 android:textSize="12sp" />
 
@@ -123,7 +125,8 @@
                                 android:layout_weight="0.5"
                                 android:ellipsize="none"
                                 android:fontFamily="sans-serif-light"
-                                android:gravity="right|center_vertical"
+                                android:gravity="center_vertical"
+                                android:textAlignment="viewEnd"
                                 android:singleLine="true"
                                 tools:text="Jan 01, 12:00, 1970"
                                 android:textColor="?headlineSecondaryTextColor"
@@ -139,7 +142,7 @@
                     android:id="@+id/flavor_video_kind"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|left"
+                    android:layout_gravity="bottom|start"
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_play_circle"
                     android:visibility="visible"
@@ -147,7 +150,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:tint="?colorAccent"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginBottom="8dp" />
 
                 <ImageView
@@ -160,7 +163,7 @@
                     android:paddingLeft="4dp"
                     android:paddingRight="4dp"
                     android:src="@drawable/ic_dots_vertical_circle"
-                    android:layout_gravity="bottom|right"
+                    android:layout_gravity="bottom|end"
                     android:elevation="4dp"
                     android:tint="?colorAccent"
                     android:layout_marginBottom="10dp"
@@ -179,6 +182,7 @@
                 android:layout_height="match_parent"
                 android:layout_span="2"
                 android:ellipsize="end"
+                android:textAlignment="viewStart"
                 android:lineSpacingExtra="2sp"
                 android:maxLines="5"
                 android:padding="16dp"
@@ -212,11 +216,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:ellipsize="end"
+                    android:ellipsize="middle"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center_vertical"
                     android:singleLine="true"
                     tools:text="by Author"
+                    android:textAlignment="viewStart"
                     android:textColor="?headlineSecondaryTextColor"
                     android:textSize="12sp"
                     android:textStyle="italic" />
