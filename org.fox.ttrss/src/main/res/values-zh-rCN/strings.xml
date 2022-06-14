@@ -223,7 +223,7 @@
         <item quantity="other">标记 %1$d 文章为已读\?</item>
     </plurals>
     <plurals name="n_unread_articles">
-        <item quantity="other">%1$d 未读文章</item>
+        <item quantity="other">%1$d篇未读文章</item>
     </plurals>
     <string name="logcat_refresh">刷新</string>
     <string name="logcat_copy">复制到剪贴板</string>
