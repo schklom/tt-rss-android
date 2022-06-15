@@ -30,9 +30,11 @@
         android:gravity="center_vertical"
         android:layout_weight="1"
         android:ellipsize="end"
-        android:paddingLeft="35dp"
+        android:paddingStart="35dp"
+        android:paddingEnd="16dp"
         android:singleLine="true"
-        tools:text="Feed"
+        tools:text="Unread only"
+        android:textAlignment="viewStart"
         android:paddingBottom="2dp"
         android:textColor="?feedlistTextColor"
         android:textSize="14sp" />
@@ -41,7 +43,6 @@
         android:id="@+id/row_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:layout_marginLeft="16dp" />
+        android:layout_weight="0"/>
 
 </LinearLayout>

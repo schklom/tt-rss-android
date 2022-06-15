@@ -31,10 +31,12 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:layout_weight="1"
-        android:ellipsize="end"
-        android:paddingLeft="35dp"
+        android:ellipsize="middle"
+        android:paddingStart="35dp"
+        android:paddingEnd="16dp"
         android:singleLine="true"
-        tools:text="Feed"
+        tools:text="Feed title"
+        android:textAlignment="viewStart"
         android:paddingBottom="2dp"
         android:textColor="?feedlistSelectedTextColor"
         android:textSize="14sp" />
@@ -45,9 +47,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0"
+        android:textAlignment="viewEnd"
         android:singleLine="true"
         tools:text="3200"
-        android:layout_marginLeft="16dp"
         android:textColor="?unreadCounterColor"
         android:textSize="14sp" />
 
