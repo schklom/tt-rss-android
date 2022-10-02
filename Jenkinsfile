@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+    }
+
     environment {
         deploy_key = "srv.tt-rss.org"
         deploy_host = "tt-rss.fakecake.org"
