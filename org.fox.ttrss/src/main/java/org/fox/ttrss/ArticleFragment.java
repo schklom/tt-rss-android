@@ -335,6 +335,20 @@ public class ArticleFragment extends StateSavedFragment  {
             }
         }
 
+        TextView host = view.findViewById(R.id.host);
+        if (host != null) {
+            try {
+                URL inurl = new URL(m_article.comments_link); /* This could be improved if /tt-rss/api:getArticle returned feed_url */
+                URL outurl = new URL(m_article.link);
+                String inhost = inurl.getHost();
+                String outhost = outurl.getHost();
+                if (!inhost.equals(outhost)) {
+                    host.setVisibility(View.VISIBLE);
+                    host.setText(outhost.replaceFirst("^www\\.", ""));
+                }
+            } catch (MalformedURLException ignored) {}
+        }
+
         TextView note = view.findViewById(R.id.note);
 
         if (note != null) {
