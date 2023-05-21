@@ -49,6 +49,7 @@ public class Article implements Parcelable {
     public String flavor_image;
     public String flavor_stream;
     public int flavor_kind;
+	public String site_url;
 
 	/* not serialized */
 	transient public Document articleDoc;
@@ -213,6 +214,7 @@ public class Article implements Parcelable {
 		out.writeString(author);
 		out.writeString(note);
         out.writeInt(selected ? 1 : 0);
+		out.writeString(site_url);
 	}
 	
 	public void readFromParcel(Parcel in) {
@@ -244,6 +246,7 @@ public class Article implements Parcelable {
 		author = in.readString();
 		note = in.readString();
         selected = in.readInt() == 1;
+		site_url = in.readString();
 	}
 	
 	@SuppressWarnings("rawtypes")
