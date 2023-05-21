@@ -343,8 +343,9 @@ public class ArticleFragment extends StateSavedFragment  {
                 String inhost = inurl.getHost();
                 String outhost = outurl.getHost();
                 if (!inhost.equals(outhost)) {
-                    host.setVisibility(View.VISIBLE);
                     host.setText(outhost.replaceFirst("^www\\.", ""));
+                    host.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_articleSmallFontSize);
+                    host.setVisibility(View.VISIBLE);
                 }
             } catch (MalformedURLException ignored) {}
         }
