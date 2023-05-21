@@ -97,6 +97,20 @@
                     android:textColor="?headlineSecondaryTextColor"
                     android:textSize="12sp" />
 
+                <TextView
+                    android:id="@+id/host"
+                    tools:text="host"
+                    android:background="@drawable/ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingTop="8dp"
+                    android:textColor="?headlineSecondaryTextColor"
+                    android:textSize="12sp"
+                    android:visibility="gone"/>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
