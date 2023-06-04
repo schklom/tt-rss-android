@@ -39,7 +39,7 @@
     <string name="article_mark_read_above">Позначити зверху як прочитане</string>
     <string name="http_login_summary">Не обов’язково. Заповніть, якщо ваш сервіс tt-rss захищений базовою автентифікацією HTTP</string>
     <string name="login_summary">Не потрібно для однокористувацького режиму</string>
-    <string name="ttrss_url_summary">https://example.org/tt-rss</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="enable_cats">Дозволити категорії каналів</string>
     <string name="no_caption_to_display">У зображення немає заголовку</string>
     <string name="browse_cats_like_feeds">Переглядати категорії як канали</string>

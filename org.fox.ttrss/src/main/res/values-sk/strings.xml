@@ -45,7 +45,7 @@
   <string name="context_selection_toggle_marked">Hviezdička</string>
   <string name="context_selection_toggle_published">Publikovaný</string>
   <string name="article_mark_read_above">Nastaviť ako prečítané</string>
-  <string name="ttrss_url_summary">http://moj_server.sk/tt-rss</string>
+  <string name="ttrss_url_summary">https://example.com/tt-rss</string>
   <string name="enable_cats">Povoliť kategórie zdrojov</string>
   <string name="browse_cats_like_feeds">Prechádzať kategórie ako zdroje</string>
   <string name="browse_cats_like_feeds_summary">Použi kontextové menu pre prechádzanie kategorie</string>

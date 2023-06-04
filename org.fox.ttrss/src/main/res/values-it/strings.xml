@@ -48,7 +48,7 @@
     <string name="article_mark_read_above">Segna sopra come letti</string>
     <string name="http_login_summary">Opzionale. Compila questo solo se la tua istanza di tt-rss è protetta tramite autenticazione HTTP Basica</string>
     <string name="login_summary">Non necessario per la modalità utente singolo</string>
-    <string name="ttrss_url_summary">URL dell\'istanza di tt-rss, es. http://sito.it/tt-rss/</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="enable_cats">Abilita categorie di notiziari</string>
     <string name="no_caption_to_display">Nessuna etichetta da mostrare</string>
     <string name="browse_cats_like_feeds">Naviga le categorie come notiziari</string>

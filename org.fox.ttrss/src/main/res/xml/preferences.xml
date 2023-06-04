@@ -15,13 +15,18 @@
             android:title="@string/password" >
         </EditTextPreference>
         <EditTextPreference
-            android:hint="@string/default_url"
             android:inputType="textUri"
             android:key="ttrss_url"
             android:singleLine="true"
             android:summary="@string/ttrss_url_summary"
             android:title="@string/ttrss_url" >
         </EditTextPreference>
+
+        <org.fox.ttrss.util.LessBrokenSwitchPreference
+            android:defaultValue="true"
+            android:key="check_for_updates"
+            android:summary="@string/check_for_updates_summary"
+            android:title="@string/check_for_updates" />
 
         <Preference
             android:key="network_settings"

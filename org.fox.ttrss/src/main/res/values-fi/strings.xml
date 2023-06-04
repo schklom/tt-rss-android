@@ -15,7 +15,7 @@
     <string name="headlines_select_dialog">Valitse artikkelit</string>
     <string name="headlines_select_all">Valitse kaikki</string>
     <string name="headlines_select_none">Poista kaikki valinnat</string>
-    <string name="ttrss_url_summary">http://example.org/tt-rss</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="error_unknown">Virhe: Tuntematon virhe (katso loki)</string>
     <string name="error_http_unauthorized">Virhe: 401 luvaton</string>
     <string name="error_http_forbidden">Virhe: 403 kielletty</string>

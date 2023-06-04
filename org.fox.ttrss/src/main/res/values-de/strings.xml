@@ -48,7 +48,7 @@
     <string name="article_mark_read_above">Obige als gelesen markieren</string>
     <string name="http_login_summary">Optional. Bitte ausfüllen, wenn die tt-rss Installation durch HTTP Basic Authentication geschützt ist</string>
     <string name="login_summary">Im Einbenutzermodus nicht nötig</string>
-    <string name="ttrss_url_summary">http://example.org/tt-rss</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="enable_cats">Feedkategorien aktivieren</string>
     <string name="no_caption_to_display">Keine Bildunterschrift vorhanden</string>
     <string name="browse_cats_like_feeds">Kategorien als Feeds anzeigen</string>

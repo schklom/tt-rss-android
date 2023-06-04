@@ -39,7 +39,7 @@
     <string name="article_mark_read_above">Bovenstaande als gelezen markeren</string>
     <string name="http_login_summary">Optioneel. Vul dit in als je tt-rss installatie is beveiligd met HTTP Basic authenticatie</string>
     <string name="login_summary">Niet nodig voor enkele gebruikersmodus</string>
-    <string name="ttrss_url_summary">http://voorbeeld.org/tt-rss</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="enable_cats">Schakel feedcategorieën in</string>
     <string name="no_caption_to_display">Geen bijschrift om weer te geven</string>
     <string name="browse_cats_like_feeds">Blader door categorieën als feeds</string>

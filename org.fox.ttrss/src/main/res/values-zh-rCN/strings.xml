@@ -181,7 +181,7 @@
     <string name="trial_expired_message">若要继续使用 Tiny Tiny RSS 请购买并解锁完整版本。</string>
     <string name="trial_purchase">解锁完整版本</string>
     <string name="ttrss_url">Tiny Tiny RSS 网址</string>
-    <string name="ttrss_url_summary">http://example.org/tt-rss</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="unread_only">仅未读</string>
     <string name="unsubscribe">取消订阅</string>
     <string name="unsubscribe_from_prompt">取消%1$s个订阅吗？</string>

@@ -212,7 +212,7 @@
     <string name="browse_cats_like_feeds_summary">Erabili kategoriaren laster-menua konfigurazio hau ezeztatzeko</string>
     <string name="browse_cats_like_feeds">Ikusi kategoriak jarioak balira bezala</string>
     <string name="enable_cats">Gaitu jarioen kategoriak</string>
-    <string name="ttrss_url_summary">http://adibidea.eus/tt-rss</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="login_summary">Ez da beharrezkoa erabiltzaile bakarreko moduarentzat</string>
     <string name="http_login_summary">Hautazkoa. Osatu eremu hau zure Tiny RSS instalazioak HTTP bidezko oinarrizko autentifikazioa erabiltzen badu</string>
     <string name="article_mark_read_above">Markatu aurreko artikuluak irakurritako gisa</string>

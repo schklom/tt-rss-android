@@ -48,7 +48,7 @@
     <string name="article_mark_read_above">Marquer comme lu jusqu\'ici</string>
     <string name="http_login_summary">Optionnel. Remplissez ceci si votre installation tt-rss est protégée par une authentification HTTP Basique</string>
     <string name="login_summary">Inutile en mode utilisateur unique</string>
-    <string name="ttrss_url_summary">L\'URL de votre répertoire d\'installation tt-rss, ex : http://site.com/tt-rss/</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="enable_cats">Activer les catégories des flux</string>
     <string name="no_caption_to_display">Aucun sous-titre trouvé</string>
     <string name="browse_cats_like_feeds">Parcourir les catégories comme les flux</string>

@@ -47,7 +47,7 @@
     <string name="article_mark_read_above">Marcar artículos anteriores como leídos</string>
     <string name="http_login_summary">Opcional. Complete este campo si su instalación de Tiny Tiny RSS usa autenticación básica por HTTP</string>
     <string name="login_summary">Sus credenciales para Tiny Tiny RSS. No son necesarias en modo de usuario único</string>
-    <string name="ttrss_url_summary">URL de su instalación de Tiny Tiny RSS, por ejemplo http://site.com/tt-rss/</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="enable_cats">Habilitar categorías de fuentes</string>
     <string name="no_caption_to_display">Ninguna leyenda para mostrar</string>
     <string name="browse_cats_like_feeds">Ver categorías como si fuesen fuentes</string>

@@ -1,11 +1,13 @@
 package org.fox.ttrss;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,6 +20,13 @@ public class PreferencesFragment extends PreferenceFragment {
 
         // Load the preferences from an XML resource
         addPreferencesFromResource(R.xml.preferences);
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
+
+        findPreference("check_for_updates").setEnabled(BuildConfig.DEBUG || BuildConfig.ENABLE_UPDATER);
+
+        findPreference("ttrss_url").setSummary(prefs.getString("ttrss_url", getString(R.string.ttrss_url_summary)));
+        findPreference("login").setSummary(prefs.getString("login", getString(R.string.login_summary)));
 
         findPreference("show_logcat").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override

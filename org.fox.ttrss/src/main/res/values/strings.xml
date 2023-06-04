@@ -49,7 +49,7 @@
     <string name="article_mark_read_above">Mark above read</string>
     <string name="http_login_summary">Optional. Fill this if your tt-rss installation is protected by HTTP Basic authentication</string>
     <string name="login_summary">Not needed for single user mode</string>
-    <string name="ttrss_url_summary">http://example.org/tt-rss</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="enable_cats">Enable feed categories</string>
     <string name="no_caption_to_display">No caption to display</string>
     <string name="browse_cats_like_feeds">Browse categories like feeds</string>
@@ -297,4 +297,6 @@
     <string name="score_for_this_article">Score for this article</string>
     <string name="set_score">Set score</string>
     <string name="score_invalid">Invalid score</string>
+    <string name="check_for_updates_summary">Check for new app releases on startup</string>
+    <string name="check_for_updates">Check for updates</string>
 </resources>

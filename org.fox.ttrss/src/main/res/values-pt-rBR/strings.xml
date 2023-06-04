@@ -48,7 +48,7 @@
     <string name="article_mark_read_above">Marcar acima como lido</string>
     <string name="http_login_summary">Opcional. Preencha este campo se sua instalação do tt-rss usa autenticação básica HTTP</string>
     <string name="login_summary">Seu usuário tt-rss. Não é necessário no modo mono usuário</string>
-    <string name="ttrss_url_summary">URL da sua instalação tt-rss, por exemplo http://site.com/tt-rss/</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="enable_cats">Habilitar categorias</string>
     <string name="no_caption_to_display">Nenhuma legenda a mostrar</string>
     <string name="browse_cats_like_feeds">Navegar pelas categorias como se fossem feeds</string>

@@ -37,7 +37,7 @@
     <string name="article_mark_read_above">Отметить выше как прочитанное</string>
     <string name="http_login_summary">Введите если ваша инсталляция tt-rss защищена авторизацией HTTP Basic</string>
     <string name="login_summary">Не требуется для однопользовательского режима</string>
-    <string name="ttrss_url_summary">http://example.org/tt-rss</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="enable_cats">Включить категории</string>
     <string name="no_caption_to_display">У изображения нет подписи</string>
     <string name="browse_cats_like_feeds">Просматривать категории как каналы</string>

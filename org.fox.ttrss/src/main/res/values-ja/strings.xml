@@ -49,7 +49,7 @@
     <string name="article_mark_read_above">これより上を既読にする</string>
     <string name="http_login_summary">オプション。tt-rssサーバにBasic認証を使用している場合は記入してください</string>
     <string name="login_summary">シングルユーザモードの場合は不要</string>
-    <string name="ttrss_url_summary">http://example.org/tt-rss/</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="enable_cats">フィードのカテゴリを有効にする</string>
     <string name="no_caption_to_display">表示するキャプションがありません</string>
     <string name="browse_cats_like_feeds">カテゴリをフィードのように扱う</string>

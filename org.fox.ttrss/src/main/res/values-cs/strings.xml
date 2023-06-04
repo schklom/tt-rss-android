@@ -45,7 +45,7 @@
     <string name="context_selection_toggle_marked">Hvězdička</string>
     <string name="context_selection_toggle_published">Publikovaný</string>
     <string name="article_mark_read_above">Označit nad jako přečtené</string>
-    <string name="ttrss_url_summary">http://muj_server.cz/tt-rss/</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="enable_cats">Povolit kategorie kanálů</string>
     <string name="browse_cats_like_feeds">Procházet kategorie jako kanály</string>
     <string name="browse_cats_like_feeds_summary">Použít místní nabídku kategorie pro přepsání tohoto nastavení</string>

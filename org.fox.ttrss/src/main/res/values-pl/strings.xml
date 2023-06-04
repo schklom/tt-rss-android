@@ -63,7 +63,7 @@
     <string name="article_mark_read_above">Oznacz art. powyżej jako przeczytane</string>
     <string name="http_login_summary">Opcjonalne. Wypełnij jedynie gdy Twoja instalacja tt-rss jest chroniona uwierzytelnianiem HTTP Basic</string>
     <string name="login_summary">Twoja nazwa użytkownika tt-rss. Nie jest wymagana dla trybu pojedynczego użytkownika</string>
-    <string name="ttrss_url_summary">Adres URL Twojej instalacji tt-rss, np. http://strona.pl/tt-rss/</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="enable_cats">Włącz kategorie kanałów</string>
     <string name="no_caption_to_display">Brak opisu do wyświetlenia</string>
     <string name="browse_cats_like_feeds">Przeglądaj kategorie jak kanały</string>

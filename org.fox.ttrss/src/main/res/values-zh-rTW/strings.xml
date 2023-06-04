@@ -44,7 +44,7 @@
     <string name="attachment_copy">複製 URL</string>
     <string name="dialog_open_preferences">設定</string>
     <string name="reload">重新載入</string>
-    <string name="ttrss_url_summary">http://example.org/tt-rss</string>
+    <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="attachments_prompt">選擇附件</string>
     <string name="offline_mode">離線模式</string>
     <string name="dialog_offline_sync_in_progress">正在同步離線資料</string>

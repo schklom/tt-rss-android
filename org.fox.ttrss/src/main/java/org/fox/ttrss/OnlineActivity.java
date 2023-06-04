@@ -265,7 +265,7 @@ public class OnlineActivity extends CommonActivity {
 	}
 
 	protected void checkUpdates() {
-		if (BuildConfig.DEBUG || BuildConfig.ENABLE_UPDATER) {
+		if (m_prefs.getBoolean("check_for_updates", true) && (BuildConfig.DEBUG || BuildConfig.ENABLE_UPDATER)) {
 			new AppUpdater(this)
 					.setUpdateFrom(UpdateFrom.JSON)
 					.setUpdateJSON(String.format("https://srv.tt-rss.org/fdroid/updates/%1$s.json", this.getPackageName()))
