@@ -63,10 +63,12 @@
             android:summary="@string/browse_cats_like_feeds_summary"
             android:title="@string/browse_cats_like_feeds" />
 
-        <org.fox.ttrss.util.LessBrokenSwitchPreference
-            android:defaultValue="true"
-            android:key="open_fresh_on_startup"
-            android:title="@string/prefs_open_fresh_on_startup" />
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/open_on_startup_names"
+            android:entryValues="@array/open_on_startup_values"
+            android:key="open_on_startup"
+            android:title="@string/open_on_startup" />
 
         <org.fox.ttrss.util.LessBrokenSwitchPreference
             android:defaultValue="false"

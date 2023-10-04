@@ -1,7 +1,10 @@
 package org.fox.ttrss.types;
 
+import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import org.fox.ttrss.R;
 
 public class Feed implements Comparable<Feed>, Parcelable {
 	public String feed_url;
@@ -20,6 +23,26 @@ public class Feed implements Comparable<Feed>, Parcelable {
 		this.id = id;
 		this.title = title;
 		this.is_cat = is_cat;
+	}
+
+	// TODO: maybe add special categories? (, bool isCat)
+	public static String getSpecialFeedTitleById(Context context, int feedId) {
+		switch (feedId) {
+			case -1:
+				return context.getString(R.string.feed_starred_articles);
+			case -2:
+				return context.getString(R.string.feed_published_articles);
+			case -3:
+				return context.getString(R.string.fresh_articles);
+			case -4:
+				return context.getString(R.string.feed_all_articles);
+			case -6:
+				return context.getString(R.string.feed_recently_read);
+			case 0:
+				return context.getString(R.string.feed_archived_articles);
+			default:
+				return null;
+		}
 	}
 	
 	public Feed(Parcel in) {

@@ -53,4 +53,16 @@
         <item>45</item>
     </string-array>
     <string name="theme_follow_device">Same as device</string>
+    <string-array name="open_on_startup_names">
+        <item>@string/fresh_articles</item>
+        <item>@string/feed_all_articles</item>
+        <item>@string/feed_starred_articles</item>
+        <item>@string/dont_open_anything</item>
+    </string-array>
+    <string-array name="open_on_startup_values" translatable="false">
+        <item>-3</item>
+        <item>-4</item>
+        <item>-1</item>
+        <item>0</item>
+    </string-array>
 </resources>

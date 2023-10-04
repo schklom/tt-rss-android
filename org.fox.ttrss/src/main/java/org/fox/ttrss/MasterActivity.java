@@ -16,6 +16,12 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.JsonElement;
 
@@ -28,11 +34,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import icepick.State;
 
 public class MasterActivity extends OnlineActivity implements HeadlinesEventListener {
@@ -178,15 +179,13 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 				ft.replace(R.id.feeds_fragment, new FeedsFragment(), FRAG_FEEDS);
 			}
 
-            if (!shortcutMode && m_prefs.getBoolean("open_fresh_on_startup", true)) {
+			int openFeedId = Integer.parseInt(m_prefs.getString("open_on_startup", "0"));
+
+			if (!shortcutMode && openFeedId != 0) {
+				Log.d(TAG, "opening feed id: " + openFeedId);
+
                 HeadlinesFragment hf = new HeadlinesFragment();
-
-                if (BuildConfig.DEBUG) {
-                    hf.initialize(new Feed(-1, getString(R.string.feed_starred_articles), false));
-                } else {
-                    hf.initialize(new Feed(-3, getString(R.string.fresh_articles), false));
-                }
-
+                hf.initialize(new Feed(openFeedId, Feed.getSpecialFeedTitleById(this, openFeedId), false));
                 ft.replace(R.id.headlines_fragment, hf, FRAG_HEADLINES);
             } else if (m_drawerLayout != null) {
                 m_drawerLayout.openDrawer(Gravity.START);

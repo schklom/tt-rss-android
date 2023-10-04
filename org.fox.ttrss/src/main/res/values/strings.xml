@@ -299,4 +299,6 @@
     <string name="score_invalid">Invalid score</string>
     <string name="check_for_updates_summary">Check for new app releases on startup</string>
     <string name="check_for_updates">Check for updates</string>
+    <string name="dont_open_anything">Nothing</string>
+    <string name="open_on_startup">Open on startup</string>
 </resources>

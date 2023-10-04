@@ -114,7 +114,7 @@ public class FeedsFragment extends BaseFeedlistFragment implements OnItemClickLi
 								catUnread += f.unread;
 							}
 
-							// localize special feed names
+							// TODO: use Feed.getSpecialFeedTitleById
 							// TODO: join with shortcut title lookup by id?
 							if (m_activeCategory != null && m_activeCategory.id == -1) {
 								switch (f.id) {

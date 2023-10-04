@@ -354,7 +354,7 @@ public class CommonActivity extends AppCompatActivity implements SharedPreferenc
 
 		String[] filter = new String[] { "enable_cats", "headline_mode", "widget_update_interval",
 				"headlines_swipe_to_dismiss", "headlines_mark_read_scroll", "headlines_request_size",
-				"force_phone_layout" };
+				"force_phone_layout", "open_on_startup"};
 
 		m_needRestart = Arrays.asList(filter).indexOf(key) != -1;
 	}
