@@ -136,6 +136,7 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 						String feedTitle = i.getStringExtra("feed_title");
 
 						// app shortcuts are not allowed to pass string extras
+						// TODO: use Feed.getSpecialFeedTitleById
 						if (feedTitle == null) {
 							switch (feedId) {
 								case -1:
