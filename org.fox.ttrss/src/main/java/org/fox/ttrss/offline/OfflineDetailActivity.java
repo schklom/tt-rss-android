@@ -74,7 +74,7 @@ public class OfflineDetailActivity extends OfflineActivity implements OfflineHea
                 }
             };
 
-            m_drawerLayout.setDrawerListener(m_drawerToggle);
+            m_drawerLayout.addDrawerListener(m_drawerToggle);
             m_drawerToggle.setDrawerIndicatorEnabled(true);
 
         }
