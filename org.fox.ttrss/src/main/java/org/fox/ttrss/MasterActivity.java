@@ -12,12 +12,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -109,7 +109,7 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
                 }
             };
 
-            m_drawerLayout.setDrawerListener(m_drawerToggle);
+            m_drawerLayout.addDrawerListener(m_drawerToggle);
             m_drawerToggle.setDrawerIndicatorEnabled(true);
 
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -118,7 +118,7 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 
         if (savedInstanceState == null) {
             if (m_drawerLayout != null && m_prefs.getBoolean("drawer_open_on_start", true)) {
-                m_drawerLayout.openDrawer(Gravity.START);
+                m_drawerLayout.openDrawer(GravityCompat.START);
             }
 
 			final Intent i = getIntent();
@@ -136,21 +136,9 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 						String feedTitle = i.getStringExtra("feed_title");
 
 						// app shortcuts are not allowed to pass string extras
-						// TODO: use Feed.getSpecialFeedTitleById
-						if (feedTitle == null) {
-							switch (feedId) {
-								case -1:
-									feedTitle = getString(R.string.feed_starred_articles);
-									break;
-								case -3:
-									feedTitle = getString(R.string.fresh_articles);
-									break;
-								case -4:
-									feedTitle = getString(R.string.feed_all_articles);
-									break;
-							}
-						}
-						
+						if (feedTitle == null)
+							feedTitle = Feed.getSpecialFeedTitleById(MasterActivity.this, feedId);
+
 						Feed tmpFeed = new Feed(feedId, feedTitle, isCat);
 						
 						onFeedSelected(tmpFeed, false);
@@ -162,7 +150,7 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 					}
 				});
 				
-				HashMap<String, String> map = new HashMap<String, String>();
+				HashMap<String, String> map = new HashMap<>();
 				map.put("op", "login");
 				map.put("user", m_prefs.getString("login", "").trim());
 				map.put("password", m_prefs.getString("password", "").trim());
@@ -189,7 +177,7 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
                 hf.initialize(new Feed(openFeedId, Feed.getSpecialFeedTitleById(this, openFeedId), false));
                 ft.replace(R.id.headlines_fragment, hf, FRAG_HEADLINES);
             } else if (m_drawerLayout != null) {
-                m_drawerLayout.openDrawer(Gravity.START);
+                m_drawerLayout.openDrawer(GravityCompat.START);
             }
 
 			ft.commit();
@@ -199,7 +187,7 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 		} else { // savedInstanceState != null
 
 			if (m_drawerLayout != null && !m_feedIsSelected) {
-				m_drawerLayout.openDrawer(Gravity.START);
+				m_drawerLayout.openDrawer(GravityCompat.START);
 			}
 		}
 
@@ -235,32 +223,10 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 			Fragment ff = getSupportFragmentManager().findFragmentByTag(FRAG_FEEDS);
 			Fragment cf = getSupportFragmentManager().findFragmentByTag(FRAG_CATS);
 			HeadlinesFragment hf = (HeadlinesFragment)getSupportFragmentManager().findFragmentByTag(FRAG_HEADLINES);
-			
-			/* if (m_drawerLayout != null) {
-                boolean isDrawerOpen = m_drawerLayout.isDrawerOpen(Gravity.START);
-
-				m_menu.setGroupVisible(R.id.menu_group_feeds, isDrawerOpen);
-				m_menu.setGroupVisible(R.id.menu_group_headlines, hf != null && hf.isAdded() && !isDrawerOpen);
-			} else {
-				m_menu.setGroupVisible(R.id.menu_group_feeds, (ff != null && ff.isAdded()) || (cf != null && cf.isAdded()));
-				m_menu.setGroupVisible(R.id.menu_group_headlines, hf != null && hf.isAdded());
-				
-				m_menu.findItem(R.id.update_headlines).setVisible(false);
-			} */
 
 			m_menu.setGroupVisible(R.id.menu_group_feeds, (ff != null && ff.isAdded()) || (cf != null && cf.isAdded()));
 			m_menu.setGroupVisible(R.id.menu_group_headlines, hf != null && hf.isAdded());
-
-			//m_menu.findItem(R.id.headlines_toggle_sidebar).setVisible(false);
-			
-			/* MenuItem item = m_menu.findItem(R.id.show_feeds);
-
-			if (getUnreadOnly()) {
-				item.setTitle(R.string.menu_all_feeds);
-			} else {
-				item.setTitle(R.string.menu_unread_feeds);
-			} */
-		}		
+		}
 	}
 
     public void onFeedSelected(Feed feed) {
@@ -326,10 +292,6 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 
 			ft.addToBackStack(null);
 			ft.commit();
-			
-			//getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-			//m_actionbarUpEnabled = true;
-			//m_actionbarRevertDepth = m_actionbarRevertDepth + 1;
 
 		} else {
 			
@@ -361,8 +323,6 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 
         switch (item.getItemId()) {
         case R.id.headlines_toggle_sort_order:
-            Dialog dialog = new Dialog(this);
-
             LinkedHashMap<String, String> sortModes = getSortModes();
 
 			CharSequence[] sortTitles = sortModes.values().toArray(new CharSequence[0]);
@@ -406,19 +366,10 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
                                 }
                             });
 
-            dialog = builder.create();
+            Dialog dialog = builder.create();
             dialog.show();
 
             return true;
-        /* case R.id.show_feeds:
-			setUnreadOnly(!getUnreadOnly());
-			invalidateOptionsMenu();
-			refresh();
-			return true; */
-		/*case R.id.update_feeds:
-			//m_pullToRefreshAttacher.setRefreshing(true);
-			refresh();
-			return true;*/
 		default:
 			Log.d(TAG, "onOptionsItemSelected, unhandled id=" + item.getItemId());
 			return super.onOptionsItemSelected(item);
@@ -427,10 +378,10 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 
     @Override
     public void onBackPressed() {
-        if (m_drawerLayout != null && !m_drawerLayout.isDrawerOpen(Gravity.START) &&
+        if (m_drawerLayout != null && !m_drawerLayout.isDrawerOpen(GravityCompat.START) &&
                 (getSupportFragmentManager().getBackStackEntryCount() > 0 || m_userFeedSelected)) {
 
-            m_drawerLayout.openDrawer(Gravity.START);
+            m_drawerLayout.openDrawer(GravityCompat.START);
         } else {
 			try {
 				super.onBackPressed();
@@ -467,18 +418,6 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 		invalidateOptionsMenu();
 	}
 
-	/* public void openFeedArticles(Feed feed) {
-		//Application.getInstance().m_loadedArticles.clear();
-		
-		Intent intent = new Intent(MasterActivity.this, DetailActivity.class);
-		intent.putExtra("feed", feed);
-		intent.putExtra("article", (Article)null);
-		intent.putExtra("searchQuery", (String)null);
-
-		startActivityForResult(intent, HEADLINES_REQUEST);
-		overridePendingTransition(R.anim.right_slide_in, 0);
-	} */
-	
 	public void onArticleSelected(Article article, boolean open) {
 		if (open) {
 			boolean alwaysOpenUri = m_prefs.getBoolean("always_open_uri", false);
@@ -500,19 +439,10 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 
 				Intent intent = new Intent(MasterActivity.this, DetailActivity.class);
 				intent.putExtra("feed", hf.getFeed());
-				//intent.putExtra("article", article);
 				intent.putExtra("searchQuery", hf.getSearchQuery());
-				//intent.putExtra("articles", (Parcelable)hf.getAllArticles());
 				Application.getInstance().tmpArticleList = hf.getAllArticles();
 				Application.getInstance().tmpArticle = article;
 
-				/* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-					startActivityForResult(intent, HEADLINES_REQUEST, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
-				} else {
-					startActivityForResult(intent, HEADLINES_REQUEST);
-				} */
-
-				// mysterious crashes somewhere in gl layer (?) on some feeds if we use activitycompat transitions here on LP so welp
 				startActivityForResult(intent, HEADLINES_REQUEST);
 				overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 			}
@@ -554,10 +484,6 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == HEADLINES_REQUEST && data != null) {
-			//Application.getInstance().m_activeArticle = null;
-
-            //ArrayList<Article> tmp = data.getParcelableArrayListExtra("articles");
-            Article article = data.getParcelableExtra("activeArticle");
             ArticleList articles = Application.getInstance().tmpArticleList;
 
             if (articles != null) {
@@ -565,12 +491,11 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 
                 if (hf != null) {
                     hf.setArticles(articles);
-                    //hf.setActiveArticle(article); disable HL scrolling on resume for now
                 }
             }
+		}
 
-
-		}		
+		super.onActivityResult(requestCode, resultCode, data);
 	}
 
 	// TODO: remove; not supported on oreo
@@ -605,8 +530,7 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 			}
 		};
 
-		@SuppressWarnings("serial")
-		HashMap<String, String> map = new HashMap<String, String>();
+		HashMap<String, String> map = new HashMap<>();
 		map.put("sid", getSessionId());
 		map.put("op", "unsubscribeFeed");
 		map.put("feed_id", String.valueOf(feed.id));
