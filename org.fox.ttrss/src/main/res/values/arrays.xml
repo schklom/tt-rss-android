@@ -28,6 +28,8 @@
         <item>1000</item>
         <item>1500</item>
         <item>2000</item>
+        <item>5000</item>
+        <item>10000</item>
     </string-array>
     <string-array name="pref_widget_update_intervals" translatable="false">
         <item>10</item>
