@@ -29,7 +29,6 @@
     <string name="sort_feeds_by_unread">Sortiere Feeds nach ungelesenen Artikeln</string>
     <string name="ssl_trust_any">Jedes SSL Zertifikat akzeptieren</string>
     <string name="category_browse_feeds">Feeds anzeigen</string>
-    <string name="blank"/>
     <string name="transport_debugging">Gesendete und empfangene Daten aufzeichnen</string>
     <string name="article_toggle_marked">Markierung ein-/ausschalten</string>
     <string name="article_toggle_unread">Als (un)gelesen markieren</string>
