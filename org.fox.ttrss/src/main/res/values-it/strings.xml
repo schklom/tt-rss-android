@@ -29,7 +29,6 @@
     <string name="sort_feeds_by_unread">Ordina i notiziari per numero di articoli non letti</string>
     <string name="ssl_trust_any">Accetta qualsiasi certificato</string>
     <string name="category_browse_feeds">Naviga i notiziari</string>
-    <string name="blank"/>
     <string name="transport_debugging">Scrivi in un log i dati inviati e ricevuti</string>
     <string name="article_toggle_marked">(non)Stella</string>
     <string name="article_toggle_unread">(non)Letto</string>

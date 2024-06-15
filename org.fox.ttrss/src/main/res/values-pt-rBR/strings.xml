@@ -29,7 +29,6 @@
     <string name="sort_feeds_by_unread">Ordenar por número de não lidos</string>
     <string name="ssl_trust_any">Aceitar qualquer certificado</string>
     <string name="category_browse_feeds">Navegar pelos feeds</string>
-    <string name="blank"/>
     <string name="transport_debugging">Registrar no log os dados enviados e recebidos</string>
     <string name="article_toggle_marked">Colocar/Retirar estrela</string>
     <string name="article_toggle_unread">Marcar como lido/não-lido</string>

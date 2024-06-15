@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-   <!-- ########################################################################## -->
+    <!-- ########################################################################## -->
    <!-- #                                                                        # -->
    <!-- #    Polish translation for Tiny Tiny RSS android client                 # -->
    <!-- #    Polskie tłumaczenie dla androidowego klienta Tiny Tiny RSS          # -->
@@ -45,21 +45,28 @@
     <string name="sort_feeds_by_unread">Sortuj według liczby nieprzeczytanych</string>
     <string name="ssl_trust_any">Akceptuj dowolny certyfikat</string>
     <string name="category_browse_feeds">Przeglądaj kanały</string>
-    <string name="blank"></string>
     <string name="transport_debugging">Rejestruj wysyłane i odbierane dane</string>
-    <string name="article_toggle_marked">O(d)gwiazdkuj</string> <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
-    <string name="article_toggle_published">O(d)publikuj</string> <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
+    <string name="article_toggle_marked">O(d)gwiazdkuj</string>
+    <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
+    <string name="article_toggle_published">O(d)publikuj</string>
+    <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
     <string name="headlines_select">Wybierz artykuły</string>
     <string name="headlines_select_dialog">Wybierz artykuły</string>
     <string name="headlines_select_all">Wszystko</string>
     <string name="headlines_select_unread">Nieprzeczytane</string>
     <string name="headlines_select_none">Odznacz wszystko</string>
-    <string name="selection_toggle_marked">O(d)gwiazdkuj</string> <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
-    <string name="selection_toggle_published">O(d)publikuj</string> <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
-    <string name="selection_toggle_unread">(Nie)Przeczytane</string> <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
-    <string name="context_selection_toggle_marked">O(d)gwiazdkuj</string> <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
-    <string name="context_selection_toggle_published">O(d)publikuj</string> <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
-    <string name="context_selection_toggle_unread">(Nie)Przeczytane</string> <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
+    <string name="selection_toggle_marked">O(d)gwiazdkuj</string>
+    <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
+    <string name="selection_toggle_published">O(d)publikuj</string>
+    <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
+    <string name="selection_toggle_unread">(Nie)Przeczytane</string>
+    <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
+    <string name="context_selection_toggle_marked">O(d)gwiazdkuj</string>
+    <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
+    <string name="context_selection_toggle_published">O(d)publikuj</string>
+    <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
+    <string name="context_selection_toggle_unread">(Nie)Przeczytane</string>
+    <!-- FIXME: mile widziane krótkie polskie odpowiedniki :D, short polish translation really welcomed :D -->
     <string name="article_mark_read_above">Oznacz art. powyżej jako przeczytane</string>
     <string name="http_login_summary">Opcjonalne. Wypełnij jedynie gdy Twoja instalacja tt-rss jest chroniona uwierzytelnianiem HTTP Basic</string>
     <string name="login_summary">Twoja nazwa użytkownika tt-rss. Nie jest wymagana dla trybu pojedynczego użytkownika</string>
@@ -79,7 +86,7 @@
     <string name="error_parse_error">Błąd: niepowodzenie przetwarzania danych JSON</string>
     <string name="error_io_error">Błąd: niepowodzenie we/wy (niedostępny serwer?)</string>
     <string name="error_other_error">Błąd: nieznany błąd (sprawdź log)</string>
-    <string name="error_api_disabled">Błąd: Włącz proszę zdalny dostęp do API w zaawansowanych ustawieniach tt-rss (Ustawienia -> Zaawansowane)</string>
+    <string name="error_api_disabled">Błąd: Włącz proszę zdalny dostęp do API w zaawansowanych ustawieniach tt-rss (Ustawienia -&gt; Zaawansowane)</string>
     <string name="error_api_unknown">Błąd: nieznany błąd API (sprawdź log)</string>
     <string name="error_api_incorrect_usage">Błąd: nieprawidłowe wywołanie API</string>
     <string name="error_login_failed">Błąd: nieprawidłowa nazwa użytkownika lub hasło</string>
@@ -132,14 +139,6 @@
     <string name="ssl_trust_any_host_long">Nie weryfikuj zgodności nazwy serwera</string>
     <string name="ssl">SSL</string>
     <string name="error_ssl_hostname_rejected">Błąd: nazwa serwera nie zweryfikowana z cert. SSL</string>
-
-    <plurals name="article_comments">
-        <item quantity="other">%1$d komentarzy</item>
-    </plurals>
-
-    <plurals name="trial_mode_prompt">
-        <item quantity="other">Tryb wersji testowej, pozostało dni: %1$d.</item>
-    </plurals>
     <string name="trial_purchase">Odblokuj pełną wersję</string>
     <string name="trial_expired">Wersja testowa wygasła</string>
     <string name="trial_expired_message">Aby nadal używać Tiny Tiny RSS odblokuj pełną wersję kupując klucz aktywacyjny.</string>
@@ -178,13 +177,7 @@
     <string name="article_img_view_caption">Zobacz opis</string>
     <string name="pref_headlines_mark_read_scroll">Oznaczaj jako przeczytane podczas przewijania</string>
     <string name="pref_headlines_mark_read_scroll_long">Nagłówki będą oznaczane jako przeczynane podczas przewijania ich listy</string>
-    <plurals name="mark_num_headlines_as_read">
-        <item quantity="other">Oznaczyć %1$d artykuł(y) jako przeczytane?</item>
-    </plurals>
     <string name="prefs_confirm_headlines_catchup">Potwierdzaj oznaczanie artykułów jako przeczytane</string>
     <string name="author_formatted">przez %1$s</string>
-    <plurals name="n_unread_articles">
-        <item quantity="other">%1$d nieprzeczytanych artykułów</item>
-    </plurals>
     <string name="pref_headline_font_size">Rozmiar czcionki nagłówka</string>
 </resources>
