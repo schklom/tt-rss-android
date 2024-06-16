@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.fox.ttrss"
-    android:versionCode="539"
-    android:versionName="1.305">
+    android:versionCode="540"
+    android:versionName="1.306">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -144,7 +144,7 @@
                 <data android:host="*" android:pathPattern=".*Podcast.*" android:scheme="https" />
                 <data android:host="*" android:pathPattern=".*rss.*" android:scheme="https" />
                 <data android:host="*" android:pathPattern=".*RSS.*" android:scheme="https" />
-                
+
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -159,7 +159,7 @@
                 <data android:mimeType="text/xml" android:scheme="https" />
                 <data android:mimeType="application/rss+xml" android:scheme="https" />
                 <data android:mimeType="application/atom+xml" android:scheme="https" />
-                
+
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
