@@ -119,10 +119,12 @@
     <string name="error_ssl_hostname_rejected">Errore: SSL dell\'hostname non verificato</string>
     <plurals name="article_comments">
         <item quantity="one">%1$d commento</item>
+        <item quantity="many">%1$d commenti</item>
         <item quantity="other">%1$d commenti</item>
     </plurals>
     <plurals name="trial_mode_prompt">
-        <item quantity="one">Modalità demo, solo %1$d rimasto.</item>
+        <item quantity="one">Modalità demo, solo %1$d giorno rimasto.</item>
+        <item quantity="many">Modalità demo, %1$d giorni rimasti.</item>
         <item quantity="other">Modalità demo, %1$d giorni rimasti.</item>
     </plurals>
     <string name="trial_purchase">Sblocca la versione completa</string>
@@ -166,12 +168,14 @@
     <string name="pref_headlines_mark_read_scroll_long">Gli articoli verranno segnati come letti quando si scorre oltre di essi</string>
     <plurals name="mark_num_headlines_as_read">
         <item quantity="one">Segna %1$d articolo come letto?</item>
+        <item quantity="many">Segna %1$d articoli come letti?</item>
         <item quantity="other">Segna %1$d articoli come letti?</item>
     </plurals>
     <string name="prefs_confirm_headlines_catchup">Confermi la segnatura degli articoli come letti</string>
     <string name="author_formatted">di %1$s</string>
     <plurals name="n_unread_articles">
         <item quantity="one">Nessun articolo non letto</item>
+        <item quantity="many">%1$d articoli non letti</item>
         <item quantity="other">%1$d articoli non letti</item>
     </plurals>
     <string name="pref_headline_font_size">Dimensione testo</string>
@@ -282,4 +286,15 @@
     <string name="prefs_headline_request_size">Quanti titoli richiedere</string>
     <string name="prefs_always_open_uri_summary">Apri gli articoli direttamente nel browser, invece di visualizzare il dettaglio</string>
     <string name="prefs_always_open_uri">Apri sempre nel browser</string>
+    <string name="img_share_image">Condividi immagine</string>
+    <string name="img_share_failed_to_load">Errore nel caricamento dell\'immagine da condividere</string>
+    <string name="open_on_startup">Apri all\'avvio</string>
+    <string name="set_score">Imposta un punteggio</string>
+    <string name="score_invalid">Punteggio non valido</string>
+    <string name="check_for_updates_summary">Controlla aggiornamenti dell\'app all\'avvio</string>
+    <string name="dont_open_anything">Niente</string>
+    <string name="img_share_url">Condividi URL</string>
+    <string name="update_categories">Aggiorna le categorie</string>
+    <string name="score_for_this_article">Dai un punteggio a questo articolo</string>
+    <string name="check_for_updates">Controlla aggiornamenti</string>
 </resources>
