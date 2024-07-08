@@ -250,4 +250,20 @@
     <string name="prefs_headline_request_size_long">慢速連線時使用較低的數值</string>
     <string name="check_for_updates">檢查更新</string>
     <string name="check_for_updates_summary">啟動時檢查應用程式版本更新</string>
+    <string name="dialog_offline_switch_prompt">是否下載未讀文章並進入離線模式？</string>
+    <string name="offline_media_cache_enabled_summary">快取媒體檔案（可能增加進入離線模式所需的時間）</string>
+    <string name="offline_articles_to_download_long">為離線模式所下載的文章數量（按時間排序）</string>
+    <string name="download_articles_and_go_offline">下載文章並進入離線模式</string>
+    <string name="synchronize_read_articles_and_go_online">同步已讀文章並進入線上模式</string>
+    <string name="prefs_widget_show_fresh_summary">顯示最近更新的文章數（而非未讀文章數）</string>
+    <string name="headlines_row_top_changed">針測到新文章，請重新整理。</string>
+    <string name="prefs_always_open_uri_summary">一律在瀏覽器中開啟，不檢視詳細內容</string>
+    <string name="prefs_offline_sort_by_feed">按摘要分組</string>
+    <string name="update_categories">更新類別</string>
+    <string name="score_for_this_article">本文評分</string>
+    <string name="set_score">評分</string>
+    <string name="score_invalid">無效的分數</string>
+    <string name="dont_open_anything">無</string>
+    <string name="open_on_startup">啟動時開啟</string>
+    <string name="dialog_offline_prompt">登入失敗。針測到離線資料，是否進入離線模式？</string>
 </resources>
