@@ -511,6 +511,8 @@ public class ArticleFragment extends StateSavedFragment  {
             cssOverride += "body { text-align : justify; } ";
         }
 
+        cssOverride += " blockquote { border-left: 5px solid gray; padding-left: 10px; margin-left: 0; margin-right: 0; }";
+
         ws.setDefaultFontSize(m_articleFontSize);
 
         StringBuilder content = new StringBuilder("<html>" +
