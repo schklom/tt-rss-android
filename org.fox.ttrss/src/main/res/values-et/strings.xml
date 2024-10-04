@@ -1,2 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="login_login">Logi sisse</string>
+    <string name="debugging">Veaotsing ja silumine</string>
+    <string name="password">Salasõna</string>
+    <string name="default_url">https://toredomeen.tld/tt-rss/</string>
+    <string name="look_and_feel">Kasutajaliides</string>
+    <string name="pref_theme">Kujundus</string>
+    <string name="ttrss_url">Tiny Tiny RSS URL</string>
+    <string name="theme_light">Hele kujundus</string>
+    <string name="theme_dark">Tume kujundus</string>
+    <string name="preferences">Seadistused</string>
+    <string name="connection">Ühendus</string>
+    <string name="loading_message">Laadime andmeid, palun oota…</string>
+    <string name="http_authentication">HTTP autentimine</string>
+    <string name="sort_feeds_by_unread">Järjesta uudisvood lugemata kirjete arvu järgi</string>
+    <string name="unread_only">Vaid lugemata</string>
+    <string name="ssl_trust_any">Nõustu mis iganes sertifikaadiga</string>
+    <string name="category_browse_feeds">Sirvi uudisvoogusid</string>
+    <string name="headlines_select">Vali artiklid</string>
+    <string name="headlines_select_dialog">Vali artiklid</string>
+    <string name="headlines_select_all">Vali kõik</string>
+    <string name="headlines_select_none">Eemalda kogu valik</string>
+    <string name="attachments_prompt">Vali manus</string>
+    <string name="attachment_view">Vaata</string>
+    <string name="attachment_copy">Kopeeri aadress</string>
+    <string name="login_in_progress">Logime sisse…</string>
+    <string name="login_need_configure">Esmalt palun seadista rakendus.</string>
+    <string name="login_ready">Sisselogimiseks valmis.</string>
+    <string name="login">Logi sisse</string>
+    <string name="share_article">Jaga artiklit</string>
+    <string name="catchup">Märgi loetuks</string>
+    <string name="headlines_mark_as_read">Märgi loetuks</string>
+    <string name="headlines_select_unread">Lugemata</string>
+    <string name="article_set_labels">Kirjelda silte</string>
+    <string name="text_copied_to_clipboard">Tekst on kopeeritud lõikelauale</string>
+    <string name="search">Otsi</string>
+    <string name="cancel">Katkesta</string>
+    <string name="dialog_close">Sulge</string>
+    <string name="pref_font_size">Teksti suurus</string>
+    <string name="article_link_copy">Kopeeri link lõikelauale</string>
+</resources>
