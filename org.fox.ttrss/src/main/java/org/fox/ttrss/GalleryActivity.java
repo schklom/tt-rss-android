@@ -166,46 +166,61 @@ public class GalleryActivity extends CommonActivity {
                 String cover = elem.attr("poster");
 
                 Element source = elem.select("source").first();
-                String src = source.attr("src");
 
-                //Log.d(TAG, "vid/src=" + src);
+                if (source != null) {
+                    String src = source.attr("src");
 
-                if (src.startsWith("//")) {
-                    src = "https:" + src;
+                    if (src.length() > 0) {
+                        //Log.d(TAG, "vid/src=" + src);
+
+                        if (src.startsWith("//")) {
+                            src = "https:" + src;
+                        }
+
+                        if (imgSrcFirst.equals(src))
+                            firstFound = true;
+
+                        try {
+                            Uri checkUri = Uri.parse(src);
+
+                            if (!"data".equals(checkUri.getScheme().toLowerCase())) {
+                                item.url = src;
+                                item.coverUrl = cover;
+                                item.type = GalleryEntry.GalleryEntryType.TYPE_VIDEO;
+                            }
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
                 }
-
-                if (imgSrcFirst.equals(src))
-                    firstFound = true;
-
-                item.url = src;
-                item.coverUrl = cover;
-                item.type = GalleryEntry.GalleryEntryType.TYPE_VIDEO;
 
             } else {
                 String src = elem.attr("src");
 
-                if (src.startsWith("//")) {
-                    src = "https:" + src;
-                }
-
-                if (imgSrcFirst.equals(src))
-                    firstFound = true;
-
-                Log.d(TAG, "img/fir=" + imgSrcFirst + ";");
-                Log.d(TAG, "img/src=" + src + "; ff=" + firstFound);
-
-                try {
-                    Uri checkUri = Uri.parse(src);
-
-                    if (!"data".equals(checkUri.getScheme().toLowerCase())) {
-                        item.url = src;
-                        item.type = GalleryEntry.GalleryEntryType.TYPE_IMAGE;
+                if (src.length() > 0) {
+                    if (src.startsWith("//")) {
+                        src = "https:" + src;
                     }
 
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                    if (imgSrcFirst.equals(src))
+                        firstFound = true;
 
+                    Log.d(TAG, "img/fir=" + imgSrcFirst + ";");
+                    Log.d(TAG, "img/src=" + src + "; ff=" + firstFound);
+
+                    try {
+                        Uri checkUri = Uri.parse(src);
+
+                        if (!"data".equals(checkUri.getScheme().toLowerCase())) {
+                            item.url = src;
+                            item.type = GalleryEntry.GalleryEntryType.TYPE_IMAGE;
+                        }
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
             }
 
             if ((firstFound || imgSrcFirst.equals("")) && item.url != null) {

@@ -118,9 +118,11 @@ public class Article implements Parcelable {
 
 					if ("video".equals(flavorImage.tagName().toLowerCase())) {
 						Element source = flavorImage.select("source").first();
-						flavorStreamUri = source.attr("src");
 
-						flavorImageUri = flavorImage.attr("poster");
+						if (source != null) {
+							flavorStreamUri = source.attr("src");
+							flavorImageUri = flavorImage.attr("poster");
+						}
 					} else if ("iframe".equals(flavorImage.tagName().toLowerCase())) {
 
 						String srcEmbed = flavorImage.attr("src");
@@ -139,7 +141,7 @@ public class Article implements Parcelable {
 					} else {
 						flavorImageUri = flavorImage.attr("src");
 
-						if (flavorImageUri != null && flavorImageUri.startsWith("//")) {
+						if (flavorImageUri.length() > 0 && flavorImageUri.startsWith("//")) {
 							flavorImageUri = "https:" + flavorImageUri;
 						}
 
@@ -155,7 +157,7 @@ public class Article implements Parcelable {
 			}
 		}
 
-		if (flavorImageUri == null) {
+		if (flavorImageUri == null || flavorImageUri.length() == 0) {
 			// consider attachments
 			if (attachments != null) {
 				for (Attachment a : attachments) {

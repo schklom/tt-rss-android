@@ -1161,13 +1161,15 @@ public class OfflineHeadlinesFragment extends Fragment implements OnItemClickLis
 
 							if ("video".equals(flavorImage.tagName().toLowerCase())) {
 								Element source = flavorImage.select("source").first();
-                                afi.flavorStreamUri = source.attr("src");
 
-                                afi.flavorImageUri = flavorImage.attr("poster");
+								if (source != null) {
+									afi.flavorStreamUri = source.attr("src");
+									afi.flavorImageUri = flavorImage.attr("poster");
+								}
 							} else {
                                 afi.flavorImageUri = flavorImage.attr("src");
 
-								if (afi.flavorImageUri != null && afi.flavorImageUri.startsWith("//")) {
+								if (afi.flavorImageUri.length() > 0 && afi.flavorImageUri.startsWith("//")) {
                                     afi.flavorImageUri = "https:" + afi.flavorImageUri;
 								}
 
@@ -1183,13 +1185,13 @@ public class OfflineHeadlinesFragment extends Fragment implements OnItemClickLis
 				}
 			}
 
-            if (afi.flavorImageUri != null && ImageCacheService.isUrlCached(m_activity, afi.flavorImageUri)) {
+            if (afi.flavorImageUri != null && afi.flavorImageUri.length() > 0 && ImageCacheService.isUrlCached(m_activity, afi.flavorImageUri)) {
                 afi.flavorImageUri = "file://" + ImageCacheService.getCacheFileName(m_activity, afi.flavorImageUri);
             } else {
                 afi.flavorImageUri = null;
             }
 
-            if (afi.flavorStreamUri != null && ImageCacheService.isUrlCached(m_activity, afi.flavorStreamUri)) {
+            if (afi.flavorStreamUri != null && afi.flavorImageUri.length() > 0 && ImageCacheService.isUrlCached(m_activity, afi.flavorStreamUri)) {
                 afi.flavorStreamUri = "file://" + ImageCacheService.getCacheFileName(m_activity, afi.flavorStreamUri);
             } else {
                 afi.flavorStreamUri = null;
