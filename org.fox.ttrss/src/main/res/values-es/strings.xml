@@ -287,7 +287,7 @@
     <string name="headline_undo_row_button">DESHACER</string>
     <string name="pref_headlines_swipe_to_dismiss_long">Desactiva el menú contextual de los titulares</string>
     <string name="pref_headlines_swipe_to_dismiss">Deslizar para descartar</string>
-    <string name="prefs_headline_request_size">¿Cuántos títulos requerir?</string>
+    <string name="prefs_headline_request_size">¿Cuántos titulares solicitar?</string>
     <string name="force_phone_layout">Forzar diseño del teléfono</string>
     <string name="set_score">Establecer puntuación</string>
     <string name="dont_open_anything">Nada</string>
