@@ -66,4 +66,9 @@
     <string name="go_online">Lülita võrgurežiimi</string>
     <string name="no_caption_to_display">Pole alapealkirja, mida saaks kuvada</string>
     <string name="browse_cats_like_feeds_summary">Selle seadistuse muutmiseks kasuta kategooriate kontekstimenüüd</string>
+    <string name="category_browse_headlines">Sirvi pealkirju</string>
+    <string name="transport_debugging">Logi on saadetud ja vastus saadud</string>
+    <string name="error_network_unavailable">Viga: puudub võrguühendus</string>
+    <string name="use_volume_keys">Kasuta helivaljuse nuppe</string>
+    <string name="use_volume_keys_long">Artiklite vahel liikumiseks kasuta nutiseadme helivaljuse nuppe</string>
 </resources>
