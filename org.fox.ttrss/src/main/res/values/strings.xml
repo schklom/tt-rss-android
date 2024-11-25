@@ -286,6 +286,7 @@
     <string name="force_phone_layout">Force phone layout</string>
 
     <string name="catchup_dialog_title">Mark %1$s as read?</string>
+    <string name="catchup_dialog_title_search">Mark search results in %1$s as read?</string>
     <string name="catchup_dialog_all_articles">All articles</string>
     <string name="catchup_dialog_1day">Older than one day</string>
     <string name="catchup_dialog_1week">Older than one week</string>

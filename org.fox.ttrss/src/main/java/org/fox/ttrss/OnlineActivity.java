@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,15 +12,12 @@ import android.content.DialogInterface.OnMultiChoiceClickListener;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.graphics.Point;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.provider.Settings;
 import android.util.Log;
 import android.view.Display;
 import android.view.KeyEvent;
@@ -31,6 +27,9 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.view.ActionMode;
+import androidx.appcompat.widget.Toolbar;
 
 import com.github.javiersantos.appupdater.AppUpdater;
 import com.github.javiersantos.appupdater.enums.UpdateFrom;
@@ -55,9 +54,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import androidx.appcompat.view.ActionMode;
-import androidx.appcompat.widget.Toolbar;
-
 public class OnlineActivity extends CommonActivity {
 	private final String TAG = this.getClass().getSimpleName();
 
@@ -78,8 +74,24 @@ public class OnlineActivity extends CommonActivity {
 
 			int selectedIndex = 0;
 
+			final String searchQuery;
+
+			if (getApiLevel() >= 22) {
+				HeadlinesFragment hf = (HeadlinesFragment) getSupportFragmentManager().findFragmentByTag(FRAG_HEADLINES);
+
+				if (hf != null) {
+					searchQuery = hf.getSearchQuery();
+				} else {
+					searchQuery = "";
+				}
+			} else {
+				searchQuery = "";
+			}
+
+			int titleStringId = searchQuery.length() > 0 ? R.string.catchup_dialog_title_search : R.string.catchup_dialog_title;
+
 			AlertDialog.Builder builder = new AlertDialog.Builder(this)
-					.setTitle(getString(R.string.catchup_dialog_title, feed.title))
+					.setTitle(getString(titleStringId, feed.title))
 					.setSingleChoiceItems(
 							new String[] {
 									getString(R.string.catchup_dialog_all_articles),
@@ -106,7 +118,7 @@ public class OnlineActivity extends CommonActivity {
 										String[] catchupModes = { "all", "1day", "1week", "2week" };
 										String mode = catchupModes[position];
 
-										catchupFeed(feed, mode, true);
+										catchupFeed(feed, mode, true, searchQuery);
 									}
 								}
 							})
@@ -130,7 +142,7 @@ public class OnlineActivity extends CommonActivity {
 								public void onClick(DialogInterface dialog,
 													int which) {
 
-									catchupFeed(feed, "all", true);
+									catchupFeed(feed, "all", true, "");
 
 								}
 							})
@@ -1263,8 +1275,8 @@ public class OnlineActivity extends CommonActivity {
 		return super.onKeyUp(keyCode, event);		
 	}
 
-	public void catchupFeed(final Feed feed, final String mode, final boolean refreshAfter) {
-		Log.d(TAG, "catchupFeed=" + feed + "; mode=" + mode);
+	public void catchupFeed(final Feed feed, final String mode, final boolean refreshAfter, final String searchQuery) {
+		Log.d(TAG, "catchupFeed=" + feed + "; mode=" + mode + "; search=" + searchQuery);
 
 		ApiRequest req = new ApiRequest(getApplicationContext()) {
 			protected void onPostExecute(JsonElement result) {
@@ -1278,6 +1290,8 @@ public class OnlineActivity extends CommonActivity {
 		map.put("sid", getSessionId());
 		map.put("op", "catchupFeed");
 		map.put("feed_id", String.valueOf(feed.id));
+		map.put("search_query", searchQuery);
+		map.put("search_lang", ""); // for the time being always user per-user default
 		map.put("mode", mode);
 		if (feed.is_cat)
 			map.put("is_cat", "1");
