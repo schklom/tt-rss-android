@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="login">Acceso</string>
+    <string name="password">Contrasinal</string>
+    <string name="preferences">Axustes</string>
+    <string name="look_and_feel">Interface</string>
+    <string name="login_in_progress">Accedendo…</string>
+    <string name="login_need_configure">Primeiro debes configurar a aplicación.</string>
+    <string name="login_ready">Preparada para acceder.</string>
+    <string name="login_login">Acceder</string>
+    <string name="debugging">Depuración</string>
+    <string name="default_url">http://exemplo.dominio/tt-rss/</string>
+    <string name="pref_theme">Decorado</string>
+    <string name="ttrss_url">URL de Tiny Tiny RSS</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Escuro</string>
+    <string name="http_authentication">Autenticación HTTP</string>
+    <string name="loading_message">Cargando, agarda…</string>
+    <string name="connection">Conexión</string>
+</resources>
