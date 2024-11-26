@@ -35,6 +35,12 @@
                 android:id="@+id/headlines_view_mode"
                 app:showAsAction=""
                 android:title="@string/headlines_view_mode"/>
+
+            <item
+                android:id="@+id/headlines_display_mode"
+                app:showAsAction=""
+                android:title="@string/headlines_display_mode"/>
+
         </group>
         <group android:id="@+id/menu_group_article" >
             <item

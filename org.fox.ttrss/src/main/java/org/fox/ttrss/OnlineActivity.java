@@ -49,6 +49,7 @@ import org.fox.ttrss.types.Label;
 import org.fox.ttrss.util.ImageCacheService;
 
 import java.lang.reflect.Type;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -620,6 +621,41 @@ public class OnlineActivity extends CommonActivity {
 				if (feed != null) {
 					catchupDialog(hf.getFeed());
 				}
+			}
+			return true;
+		case R.id.headlines_display_mode:
+			if (hf != null) {
+				Dialog dialog = new Dialog(this);
+
+				String headlineMode = m_prefs.getString("headline_mode", "HL_DEFAULT");
+				String[] headlineModeNames = getResources().getStringArray(R.array.headline_mode_names);
+				final String[] headlineModeValues = getResources().getStringArray(R.array.headline_mode_values);
+
+				int selectedIndex = Arrays.asList(headlineModeValues).indexOf(headlineMode);
+
+				AlertDialog.Builder builder = new AlertDialog.Builder(this)
+						.setTitle(R.string.headlines_set_view_mode)
+						.setSingleChoiceItems(headlineModeNames,
+								selectedIndex, new DialogInterface.OnClickListener() {
+									@Override
+									public void onClick(DialogInterface dialog,
+														int which) {
+										dialog.cancel();
+
+										SharedPreferences.Editor editor = m_prefs.edit();
+										editor.putString("headline_mode", headlineModeValues[which]);
+										editor.apply();
+
+										finish();
+										startActivity(getIntent());
+										overridePendingTransition(0, 0);
+
+									}
+								});
+
+				dialog = builder.create();
+				dialog.show();
+
 			}
 			return true;
 		case R.id.headlines_view_mode:

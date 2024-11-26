@@ -158,6 +158,7 @@
     <!-- <string name="error_url_contains_multiple_feeds">Error: URL contains multiple feeds</string> -->
     <string name="error_could_not_download_url">Error: Could not download URL</string>
     <string name="headlines_view_mode">Set view mode</string>
+    <string name="headlines_display_mode">Set display mode</string>
     <string name="headlines_set_view_mode">Set view mode</string>
     <string name="headlines_adaptive">Adaptive</string>
     <string name="headlines_all_articles">All articles</string>
