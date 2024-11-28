@@ -267,4 +267,6 @@
     <string name="dont_open_anything">无</string>
     <string name="check_for_updates">检查更新</string>
     <string name="open_on_startup">启动时打开</string>
+    <string name="headlines_display_mode">设置显示模式</string>
+    <string name="catchup_dialog_title_search">将%1$s中的搜索结果标记为已读？</string>
 </resources>
