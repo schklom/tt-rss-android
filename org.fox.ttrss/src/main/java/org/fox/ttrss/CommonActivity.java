@@ -271,8 +271,10 @@ public class CommonActivity extends AppCompatActivity implements SharedPreferenc
 
 		String customTabPackageName = getCustomTabPackageName(this);
 
-		CustomTabsClient.bindCustomTabsService(this, customTabPackageName != null ?
+		boolean customTabServiceBound = CustomTabsClient.bindCustomTabsService(this, customTabPackageName != null ?
 				customTabPackageName : "com.android.chrome", m_customTabServiceConnection);
+
+		Log.d(TAG, "customTabServiceBound=" + customTabServiceBound + "; package name=" + customTabPackageName);
 
 		super.onCreate(savedInstanceState);
 	}
@@ -496,6 +498,8 @@ public class CommonActivity extends AppCompatActivity implements SharedPreferenc
 		}
 
 		final Uri finalUri = uri;
+
+		Log.d(TAG, "openUri=" + uri + "; enableCustomTabs=" + enableCustomTabs + "; customTabClient=" + m_customTabClient);
 
 		if (enableCustomTabs && m_customTabClient != null) {
 
