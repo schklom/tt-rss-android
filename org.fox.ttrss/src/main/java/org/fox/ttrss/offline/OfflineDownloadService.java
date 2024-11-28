@@ -109,7 +109,7 @@ public class OfflineDownloadService extends Service {
 		Intent intent = new Intent(this, OnlineActivity.class);
 		
 		PendingIntent contentIntent = PendingIntent.getActivity(this, PI_GENERIC,
-                intent, 0);
+                intent, PendingIntent.FLAG_IMMUTABLE);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext())
                 .setContentText(msg)
@@ -129,7 +129,7 @@ public class OfflineDownloadService extends Service {
 			intent = new Intent(this, OnlineActivity.class);
 			intent.setAction(INTENT_ACTION_CANCEL);
 
-			PendingIntent cancelIntent = PendingIntent.getActivity(this, PI_CANCEL, intent, 0);
+			PendingIntent cancelIntent = PendingIntent.getActivity(this, PI_CANCEL, intent, PendingIntent.FLAG_IMMUTABLE);
 
             builder.setCategory(Notification.CATEGORY_PROGRESS)
                     .setVibrate(new long[0])
@@ -155,7 +155,7 @@ public class OfflineDownloadService extends Service {
 		}
 
 		PendingIntent contentIntent = PendingIntent.getActivity(this, PI_SUCCESS,
-				intent, PendingIntent.FLAG_UPDATE_CURRENT);
+				intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
 		NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext())
 				.setContentIntent(contentIntent)

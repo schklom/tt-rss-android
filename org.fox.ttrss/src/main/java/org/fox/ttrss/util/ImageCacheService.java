@@ -163,7 +163,7 @@ public class ImageCacheService extends IntentService {
 		intent.setAction(OfflineDownloadService.INTENT_ACTION_SWITCH_OFFLINE);
 
 		PendingIntent contentIntent = PendingIntent.getActivity(this, OfflineDownloadService.PI_SUCCESS,
-				intent, PendingIntent.FLAG_UPDATE_CURRENT);
+				intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
 		NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext())
 				.setContentTitle(getString(R.string.dialog_offline_success))
@@ -181,7 +181,7 @@ public class ImageCacheService extends IntentService {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 			builder.setCategory(Notification.CATEGORY_MESSAGE)
 					.setVibrate(new long[0])
-					.setVisibility(Notification.VISIBILITY_PUBLIC)
+					.setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
 					.setColor(0x88b0f0)
 					.setGroup("org.fox.ttrss");
 		}
@@ -199,7 +199,7 @@ public class ImageCacheService extends IntentService {
 		Intent intent = new Intent(this, OnlineActivity.class);
 
 		PendingIntent contentIntent = PendingIntent.getActivity(this, OfflineDownloadService.PI_GENERIC,
-                intent, 0);
+                intent, PendingIntent.FLAG_IMMUTABLE);
 
 		NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext())
 				.setContentText(msg)
@@ -218,11 +218,11 @@ public class ImageCacheService extends IntentService {
 			intent = new Intent(this, OnlineActivity.class);
 			intent.setAction(OfflineDownloadService.INTENT_ACTION_CANCEL);
 
-			PendingIntent cancelIntent = PendingIntent.getActivity(this, OfflineDownloadService.PI_CANCEL, intent, 0);
+			PendingIntent cancelIntent = PendingIntent.getActivity(this, OfflineDownloadService.PI_CANCEL, intent, PendingIntent.FLAG_IMMUTABLE);
 
 			builder.setCategory(Notification.CATEGORY_PROGRESS)
 					.setVibrate(new long[0])
-					.setVisibility(Notification.VISIBILITY_PUBLIC)
+					.setVisibility(NotificationCompat.VISIBILITY_PRIVATE)
 					.setColor(0x88b0f0)
 					.setGroup("org.fox.ttrss")
 					.addAction(R.drawable.ic_launcher, getString(R.string.cancel), cancelIntent);

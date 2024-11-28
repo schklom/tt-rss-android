@@ -196,7 +196,7 @@ public class WidgetUpdateService extends JobIntentService {
     private void updateWidgetsText(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds, int unread, int resultCode) {
 
         Intent intent = new Intent(context, OnlineActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_small);
         views.setOnClickPendingIntent(R.id.widget_main, pendingIntent);

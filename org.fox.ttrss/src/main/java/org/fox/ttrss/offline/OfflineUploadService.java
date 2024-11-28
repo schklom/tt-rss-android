@@ -61,7 +61,7 @@ public class OfflineUploadService extends IntentService {
 	@SuppressWarnings("deprecation")
 	private void updateNotification(String msg, int progress, int max, boolean showProgress, boolean isError) {
 		PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, OnlineActivity.class), 0);
+                new Intent(this, OnlineActivity.class), PendingIntent.FLAG_IMMUTABLE);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext())
                 .setContentText(msg)

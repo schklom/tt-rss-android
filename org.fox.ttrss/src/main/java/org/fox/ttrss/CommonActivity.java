@@ -468,7 +468,7 @@ public class CommonActivity extends AppCompatActivity implements SharedPreferenc
 			Intent shareIntent = getShareIntent(uri.toString(), null);
 
 			PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(),
-					CommonActivity.PENDING_INTENT_CHROME_SHARE, shareIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+					CommonActivity.PENDING_INTENT_CHROME_SHARE, shareIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
 			builder.setActionButton(BitmapFactory.decodeResource(getResources(), R.drawable.ic_share),
 					getString(R.string.share_article), pendingIntent);
@@ -595,7 +595,7 @@ public class CommonActivity extends AppCompatActivity implements SharedPreferenc
 		intentUpdate.setAction(SmallWidgetProvider.ACTION_REQUEST_UPDATE);
 
 		PendingIntent pendingIntentAlarm = PendingIntent.getBroadcast(context,
-				0, intentUpdate, PendingIntent.FLAG_UPDATE_CURRENT);
+				0, intentUpdate, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
 		alarmManager.cancel(pendingIntentAlarm);
 
