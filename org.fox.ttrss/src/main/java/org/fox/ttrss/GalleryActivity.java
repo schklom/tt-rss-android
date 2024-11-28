@@ -162,7 +162,7 @@ public class GalleryActivity extends CommonActivity {
 
             GalleryEntry item = new GalleryEntry();
 
-            if ("video".equals(elem.tagName().toLowerCase())) {
+            if ("video".equalsIgnoreCase(elem.tagName())) {
                 String cover = elem.attr("poster");
 
                 Element source = elem.select("source").first();
@@ -183,7 +183,7 @@ public class GalleryActivity extends CommonActivity {
                         try {
                             Uri checkUri = Uri.parse(src);
 
-                            if (!"data".equals(checkUri.getScheme().toLowerCase())) {
+                            if (!"data".equalsIgnoreCase(checkUri.getScheme())) {
                                 item.url = src;
                                 item.coverUrl = cover;
                                 item.type = GalleryEntry.GalleryEntryType.TYPE_VIDEO;
@@ -212,7 +212,7 @@ public class GalleryActivity extends CommonActivity {
                     try {
                         Uri checkUri = Uri.parse(src);
 
-                        if (!"data".equals(checkUri.getScheme().toLowerCase())) {
+                        if (!"data".equalsIgnoreCase(checkUri.getScheme())) {
                             item.url = src;
                             item.type = GalleryEntry.GalleryEntryType.TYPE_IMAGE;
                         }

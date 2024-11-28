@@ -32,6 +32,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.core.text.HtmlCompat;
+
 import org.fox.ttrss.types.Article;
 import org.fox.ttrss.types.Attachment;
 
@@ -199,7 +201,7 @@ public class ArticleFragment extends StateSavedFragment  {
             else
                 titleStr = m_article.title;
 
-            title.setText(Html.fromHtml(titleStr));
+            title.setText(HtmlCompat.fromHtml(titleStr, HtmlCompat.FROM_HTML_MODE_LEGACY));
             //title.setPaintFlags(title.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
             title.setOnClickListener(new OnClickListener() {
                 @Override
@@ -490,18 +492,13 @@ public class ArticleFragment extends StateSavedFragment  {
 
         String articleContent = m_article.content != null ? m_article.content : "";
 
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            ws.setJavaScriptEnabled(true);
+        ws.setJavaScriptEnabled(true);
 
-            m_chromeClient = new FSVideoChromeClient(getView());
-            m_web.setWebChromeClient(m_chromeClient);
+        m_chromeClient = new FSVideoChromeClient(getView());
+        m_web.setWebChromeClient(m_chromeClient);
 
-            if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                ws.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
-            }
-
-            ws.setMediaPlaybackRequiresUserGesture(true);
-        }
+        ws.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+        ws.setMediaPlaybackRequiresUserGesture(true);
 
         if (m_activity.isUiNightMode()) {
             m_web.setBackgroundColor(Color.BLACK);
