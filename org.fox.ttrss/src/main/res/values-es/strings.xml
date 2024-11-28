@@ -291,4 +291,6 @@
     <string name="force_phone_layout">Forzar diseño del teléfono</string>
     <string name="set_score">Establecer puntuación</string>
     <string name="dont_open_anything">Nada</string>
+    <string name="catchup_dialog_title_search">¿Marcar los resultados de la búsqueda %1$s como leídos?</string>
+    <string name="headlines_display_mode">Modo de visualización</string>
 </resources>
