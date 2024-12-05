@@ -178,13 +178,11 @@ public class ImageCacheService extends IntentService {
 				.setDefaults(Notification.DEFAULT_ALL)
 				.setAutoCancel(true);
 
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-			builder.setCategory(Notification.CATEGORY_MESSAGE)
-					.setVibrate(new long[0])
-					.setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-					.setColor(0x88b0f0)
-					.setGroup("org.fox.ttrss");
-		}
+		builder.setCategory(Notification.CATEGORY_MESSAGE)
+				.setVibrate(new long[0])
+				.setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+				.setColor(0x88b0f0)
+				.setGroup("org.fox.ttrss");
 
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 			builder.setChannelId(CommonActivity.NOTIFICATION_CHANNEL_PRIORITY);
@@ -214,19 +212,18 @@ public class ImageCacheService extends IntentService {
 
 		if (showProgress) builder.setProgress(max, progress, max == 0);
 
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-			intent = new Intent(this, OnlineActivity.class);
-			intent.setAction(OfflineDownloadService.INTENT_ACTION_CANCEL);
+		intent = new Intent(this, OnlineActivity.class);
+		intent.setAction(OfflineDownloadService.INTENT_ACTION_CANCEL);
 
-			PendingIntent cancelIntent = PendingIntent.getActivity(this, OfflineDownloadService.PI_CANCEL, intent, PendingIntent.FLAG_IMMUTABLE);
+		PendingIntent cancelIntent = PendingIntent.getActivity(this,
+				OfflineDownloadService.PI_CANCEL, intent, PendingIntent.FLAG_IMMUTABLE);
 
-			builder.setCategory(Notification.CATEGORY_PROGRESS)
-					.setVibrate(new long[0])
-					.setVisibility(NotificationCompat.VISIBILITY_PRIVATE)
-					.setColor(0x88b0f0)
-					.setGroup("org.fox.ttrss")
-					.addAction(R.drawable.ic_launcher, getString(R.string.cancel), cancelIntent);
-		}
+		builder.setCategory(Notification.CATEGORY_PROGRESS)
+				.setVibrate(new long[0])
+				.setVisibility(NotificationCompat.VISIBILITY_PRIVATE)
+				.setColor(0x88b0f0)
+				.setGroup("org.fox.ttrss")
+				.addAction(R.drawable.ic_launcher, getString(R.string.cancel), cancelIntent);
 
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 			builder.setChannelId(CommonActivity.NOTIFICATION_CHANNEL_NORMAL);
