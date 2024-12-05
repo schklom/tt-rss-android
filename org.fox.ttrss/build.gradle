@@ -15,6 +15,8 @@ android {
         buildConfigField "boolean", "ENABLE_UPDATER", "false"
         minSdkVersion 24
         targetSdkVersion 31
+        versionCode 552
+        versionName "1.317"
     }
 
     signingConfigs {
