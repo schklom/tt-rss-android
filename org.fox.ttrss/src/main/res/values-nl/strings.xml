@@ -271,4 +271,6 @@
     <string name="img_share_url">Deel URL</string>
     <string name="img_share_image">Deel afbeelding</string>
     <string name="open_on_startup">Open bij opstarten</string>
+    <string name="headlines_display_mode">Stel weergave modus in</string>
+    <string name="catchup_dialog_title_search">Markeer zoek resultaten in %1$s als gelezen?</string>
 </resources>
