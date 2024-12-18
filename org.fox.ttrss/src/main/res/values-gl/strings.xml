@@ -17,4 +17,9 @@
     <string name="http_authentication">Autenticación HTTP</string>
     <string name="loading_message">Cargando, agarda…</string>
     <string name="connection">Conexión</string>
+    <string name="unread_only">Só sen ler</string>
+    <string name="share_article">Compartir artigo</string>
+    <string name="sort_feeds_by_unread">Orde das canles por Artigos sen ler</string>
+    <string name="ssl_trust_any">Aceptar calquera certificado</string>
+    <string name="category_browse_feeds">Ver as canles</string>
 </resources>

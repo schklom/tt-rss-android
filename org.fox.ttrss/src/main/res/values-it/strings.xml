@@ -297,4 +297,7 @@
     <string name="update_categories">Aggiorna le categorie</string>
     <string name="score_for_this_article">Dai un punteggio a questo articolo</string>
     <string name="check_for_updates">Controlla aggiornamenti</string>
+    <string name="blank">" "</string>
+    <string name="headlines_display_mode">Imposta modalità di visualizzazione</string>
+    <string name="catchup_dialog_title_search">Segna i risultati della ricerca %1$s come letti?</string>
 </resources>

@@ -320,4 +320,6 @@
     <string name="unread_only">Tylko nieprzeczytane</string>
     <string name="article_toggle_unread">(Nie)Przeczytane</string>
     <string name="prefs_enable_image_downsampling_long">Prosi backend o zmniejszenie rozmiaru obrazów, jeśli nie są w sieci Wi-Fi. Wymaga wtyczki (ttrss-api-resize)</string>
+    <string name="headlines_display_mode">Ustaw tryb wyświetlania</string>
+    <string name="catchup_dialog_title_search">Zaznaczyć wyniki wyszukiwania w %1$s jako przeczytane?</string>
 </resources>
