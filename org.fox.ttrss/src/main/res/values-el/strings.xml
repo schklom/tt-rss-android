@@ -1,2 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="login_in_progress">Σύνδεση…</string>
+    <string name="login_need_configure">Παρακαλώ διαμορφώστε την εφαρμογή πρώτα.</string>
+    <string name="login_ready">Έτοιμο για σύνδεση.</string>
+    <string name="login_login">Σύνδεση</string>
+    <string name="login">Σύνδεση</string>
+    <string name="debugging">Εντοπισμός σφαλμάτων</string>
+    <string name="password">Κωδικός</string>
+    <string name="default_url">http://example.domain/tt-rss/</string>
+    <string name="look_and_feel">Εμφάνιση εφαρμογής</string>
+    <string name="pref_theme">Θέμα</string>
+    <string name="ttrss_url">Σύνδεσμος Tiny Tiny RSS</string>
+    <string name="theme_dark">Σκοτεινό</string>
+    <string name="theme_light">Φωτεινό</string>
+    <string name="preferences">Ρυθμίσεις</string>
+    <string name="connection">Σύνδεση</string>
+    <string name="http_authentication">Επαλήθευση HTTP</string>
+    <string name="loading_message">Φορτώνει, παρακαλώ περιμένετε…</string>
+    <string name="unread_only">Μόνο αδιάβαστα</string>
+    <string name="catchup">Σήμανση ως αναγνωσμένο</string>
+    <string name="sort_feeds_by_unread">Ταξινόμηση ροών με βάση τον αριθμό μη αναγνωσμένων</string>
+    <string name="ssl_trust_any">Αποδοχή οποιουδήποτε πιστοποιητικού</string>
+    <string name="category_browse_feeds">Περιήγηση στις ροές</string>
+    <string name="transport_debugging">Καταγραφή απεσταλμένων και εισερχομένων δεδομένων</string>
+    <string name="article_toggle_published">Δημοσίευση</string>
+    <string name="share_article">Κοινοποίηση άρθρου</string>
+    <string name="article_toggle_marked">Σήμανση με αστέρι</string>
+    <string name="article_toggle_unread">Σήμανση ως αναγνωσμένο</string>
+</resources>
