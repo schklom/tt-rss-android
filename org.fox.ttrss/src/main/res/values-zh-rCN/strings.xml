@@ -269,4 +269,5 @@
     <string name="open_on_startup">启动时打开</string>
     <string name="headlines_display_mode">设置显示模式</string>
     <string name="catchup_dialog_title_search">将%1$s中的搜索结果标记为已读？</string>
+    <string name="blank">" "</string>
 </resources>
