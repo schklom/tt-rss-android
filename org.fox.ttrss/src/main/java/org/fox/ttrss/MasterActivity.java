@@ -168,13 +168,23 @@ public class MasterActivity extends OnlineActivity implements HeadlinesEventList
 				ft.replace(R.id.feeds_fragment, new FeedsFragment(), FRAG_FEEDS);
 			}
 
-			int openFeedId = Integer.parseInt(m_prefs.getString("open_on_startup", "0"));
+			// allow overriding feed to open on startup in non-shortcut mode, default to
+			// open_on_startup prefs setting and not-category
+
+			int openFeedId = i.getIntExtra("feed_id",
+				Integer.parseInt(m_prefs.getString("open_on_startup", "0")));
+			boolean openFeedIsCat = i.getBooleanExtra("feed_is_cat", false);
+
+			String openFeedTitle = i.getStringExtra("feed_title");
+
+			if (openFeedTitle == null)
+				openFeedTitle = Feed.getSpecialFeedTitleById(this, openFeedId);
 
 			if (!shortcutMode && openFeedId != 0) {
 				Log.d(TAG, "opening feed id: " + openFeedId);
 
                 HeadlinesFragment hf = new HeadlinesFragment();
-                hf.initialize(new Feed(openFeedId, Feed.getSpecialFeedTitleById(this, openFeedId), false));
+                hf.initialize(new Feed(openFeedId, openFeedTitle, openFeedIsCat));
                 ft.replace(R.id.headlines_fragment, hf, FRAG_HEADLINES);
             } else if (m_drawerLayout != null) {
                 m_drawerLayout.openDrawer(GravityCompat.START);

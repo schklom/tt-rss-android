@@ -646,10 +646,20 @@ public class OnlineActivity extends CommonActivity {
 										editor.putString("headline_mode", headlineModeValues[which]);
 										editor.apply();
 
-										finish();
-										startActivity(getIntent());
-										overridePendingTransition(0, 0);
+										Intent intent = getIntent();
 
+										Feed feed = hf.getFeed();
+
+										if (feed != null) {
+											intent.putExtra("feed_id", feed.id);
+											intent.putExtra("feed_is_cat", feed.is_cat);
+											intent.putExtra("feed_title", feed.title);
+										}
+
+										finish();
+
+										startActivity(intent);
+										overridePendingTransition(0, 0);
 									}
 								});
 
