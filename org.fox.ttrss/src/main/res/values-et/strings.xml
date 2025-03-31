@@ -189,4 +189,25 @@
     <string name="synchronize_read_articles_and_go_online">Sünkroniseeri loetud artiklid ja kasuta võrgurežiimi</string>
     <string name="pref_headlines_mark_read_scroll_long">Pealkirjad märgitakse loetuks neist mööda kerimisel</string>
     <string name="font_size_dialog_suffix">sp</string>
+    <string name="headlines_all_articles">Kõik artiklid</string>
+    <string name="headlines_unread">Lugemata</string>
+    <string name="headlines_display_mode">Säti ekraanivaadet</string>
+    <string name="headlines_adaptive">Kohanduv</string>
+    <string name="headlines_starred">Märgitud lemmikuks</string>
+    <string name="headlines_published">Avaldatud</string>
+    <string name="fresh_articles">Uued artiklid</string>
+    <string name="cat_special">Erivalikud</string>
+    <string name="feed_all_articles">Kõik artiklid</string>
+    <string name="headlines_view_mode">Säti vaaterežiimi</string>
+    <string name="headlines_set_view_mode">Säti vaaterežiimi</string>
+    <string name="toggle_sort_order">Näita/ära näita esmalt vanimaid</string>
+    <string name="headlines_sort_default">Vaikimisi</string>
+    <string name="headlines_sort_newest_first">Esmalt uuemad</string>
+    <string name="headlines_sort_oldest_first">Esmalt vanemad</string>
+    <string name="headlines_sort_title">Pealkirja alusel</string>
+    <string name="headlines_sort_articles_title">Järjesta artikleid</string>
+    <string name="feed_starred_articles">Lemmikuks märgitud artiklid</string>
+    <string name="feed_recently_read">Hiljuti loetud</string>
+    <string name="feed_published_articles">Avaldatud artiklid</string>
+    <string name="feed_archived_articles">Arhiveeritud artiklid</string>
 </resources>
