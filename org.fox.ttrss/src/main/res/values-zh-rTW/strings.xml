@@ -60,7 +60,7 @@
     <string name="author_formatted">%1$s</string>
     <string name="article_media_share">分享</string>
     <string name="headlines_unread">未讀</string>
-    <string name="headlines_published">已發佈</string>
+    <string name="headlines_published">已發布</string>
     <string name="headlines_all_articles">所有文章</string>
     <string name="headlines_view_mode">設定檢視模式</string>
     <string name="share_content_hint">文章内容</string>
@@ -92,7 +92,7 @@
     <string name="headlines_sort_newest_first">由新到舊</string>
     <string name="headlines_sort_oldest_first">由舊到新</string>
     <string name="feed_starred_articles">加星標文章</string>
-    <string name="feed_published_articles">已發佈文章</string>
+    <string name="feed_published_articles">已發布文章</string>
     <string name="feed_recently_read">最近閱讀</string>
     <string name="prefs_version">%1$s (%2$d)</string>
     <string name="prefs_build_timestamp">%1$s</string>
@@ -170,7 +170,7 @@
     <string name="trial_expired">試用已過期</string>
     <string name="trial_expired_message">請購買並解鎖完整版本以繼續使用 Tiny Tiny RSS 。</string>
     <string name="use_volume_keys_long">使用硬體音量按鈕切換文章</string>
-    <string name="browse_cats_like_feeds_summary">可使用類別情境選單覆寫此設置</string>
+    <string name="browse_cats_like_feeds_summary">可使用類別情境選單覆寫此設定</string>
     <string name="reading">閱讀</string>
     <string name="accel_webview_summary">如果出現閃爍或畫面故障請停用</string>
     <string name="http_login_summary">選用。如果您的 tt-rss 是被 HTTP 基本認證保護則需要填此項</string>
@@ -266,4 +266,7 @@
     <string name="dont_open_anything">無</string>
     <string name="open_on_startup">啟動時開啟</string>
     <string name="dialog_offline_prompt">登入失敗。針測到離線資料，是否進入離線模式？</string>
+    <string name="blank">" "</string>
+    <string name="headlines_display_mode">設定顯示模式</string>
+    <string name="catchup_dialog_title_search">將 %1$s 的搜尋結果標示為已讀取嗎？</string>
 </resources>
