@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="password">Şifre</string>
+    <string name="default_url">http://example.domain/tt-rss/</string>
+    <string name="theme_light">Aydınlık</string>
+    <string name="theme_dark">Karanlık</string>
+    <string name="login_need_configure">Lütfen önce uygulamayı yapılandırın.</string>
+    <string name="preferences">Ayarlar</string>
+    <string name="login">Giriş</string>
+    <string name="login_login">Giriş</string>
+    <string name="debugging">Hata ayıklama</string>
+</resources>
