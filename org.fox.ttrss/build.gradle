@@ -74,6 +74,7 @@ android {
     namespace = 'org.fox.ttrss'
     buildFeatures {
         buildConfig = true
+        resValues = true
     }
     lint {
         abortOnError = true
