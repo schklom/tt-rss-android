@@ -44,6 +44,7 @@ jobs:
         fi
         mkdir -p "${HOME}/.android"
         echo "${DEBUG_KEYSTORE_BASE64}" | base64 --decode > "${HOME}/.android/debug.keystore"
+        keytool -list -v -keystore "${HOME}/.android/debug.keystore" -storepass android -alias androiddebugkey
       env:
         DEBUG_KEYSTORE_BASE64: ${{ secrets.DEBUG_KEYSTORE_BASE64 }}
 
