@@ -36,6 +36,17 @@ jobs:
     - name: Set up Gradle
       uses: gradle/actions/setup-gradle@v6
 
+    - name: Restore stable debug keystore
+      run: |
+        if [ -z "${DEBUG_KEYSTORE_BASE64}" ]; then
+          echo "ERROR: DEBUG_KEYSTORE_BASE64 is required."
+          exit 1
+        fi
+        mkdir -p "${HOME}/.android"
+        echo "${DEBUG_KEYSTORE_BASE64}" | base64 --decode > "${HOME}/.android/debug.keystore"
+      env:
+        DEBUG_KEYSTORE_BASE64: ${{ secrets.DEBUG_KEYSTORE_BASE64 }}
+
     - name: Run checks and build debug APK
       run: ./gradlew --no-daemon check assembleDebug
 
