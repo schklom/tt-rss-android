@@ -319,4 +319,7 @@
     <string name="headline_display_mode_compact_feed_images">Compact (images du flux)</string>
     <string name="move_between_articles">Passer d\'un article à l\'autre</string>
     <string name="move_between_articles_long">Naviguez entre les articles en faisant glisser votre doigt vers la gauche ou la droite</string>
+    <string name="prefs_preferred_browser">Navigateur préféré</string>
+    <string name="prefs_preferred_browser_summary">Choisissez le navigateur qui ouvre les liens externes. Sélectionner un navigateur spécifique désactive l\'aperçu rapide (onglets personnalisés).</string>
+    <string name="prefs_preferred_browser_default">Par défaut du système</string>
 </resources>
