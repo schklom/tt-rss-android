@@ -1,4 +1,4 @@
-<androidx.drawerlayout.widget.DrawerLayout
+<org.fox.ttrss.util.CategoryDrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/headlines_drawer"
     android:layout_width="fill_parent"
@@ -61,4 +61,4 @@
 
     </com.google.android.material.navigation.NavigationView>
 
-</androidx.drawerlayout.widget.DrawerLayout>
+</org.fox.ttrss.util.CategoryDrawerLayout>
