@@ -220,7 +220,7 @@
     <string name="prefs_widget_show_fresh_summary">Afficher le nombre d\'articles récents plutôt que le total d\'articles non lus</string>
     <string name="prefs_widget">Widget</string>
     <string name="title_activity_video_player">Lecteur Vidéo</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Bonjour le monde !</string>
     <string name="action_settings">Paramètres</string>
     <string name="video_player_share">Partager la vidéo</string>
     <string name="video_player_open">Ouvrir la vidéo</string>
