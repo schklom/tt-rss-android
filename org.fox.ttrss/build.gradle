@@ -172,7 +172,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.14.0'
     implementation 'com.google.code.gson:gson:2.14.0'
     implementation 'me.relex:circleindicator:2.1.6'
-    implementation 'com.github.amulyakhare:TextDrawable:558677ea31'
+    implementation 'com.github.amulyakhare:TextDrawable:558677ea316e60346948b381e5e274f49b00d370'
     implementation 'com.telefonica:nestedscrollwebview:0.2.0'
     implementation 'androidx.preference:preference:1.2.1'
     implementation 'androidx.work:work-runtime:2.12.0'
