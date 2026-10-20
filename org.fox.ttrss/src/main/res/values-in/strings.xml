@@ -5,7 +5,7 @@
     <string name="login_ready">Siap untuk masuk.</string>
     <string name="login_login">Masuk</string>
     <string name="login">Masuk</string>
-    <string name="debugging">Debugging</string>
+    <string name="debugging">Pencarian kesalahan</string>
     <string name="password">Kata sandi</string>
     <string name="look_and_feel">Antarmuka</string>
     <string name="pref_theme">Tema</string>
@@ -313,4 +313,13 @@
     <string name="prefs_preferred_browser_default">Pengaturan default</string>
     <string name="open_link">Buka tautan</string>
     <string name="open_with_app">Buka dengan aplikasi</string>
+    <string name="prefs_backup">Cadangan</string>
+    <string name="prefs_export_settings">Ekspor pengaturan</string>
+    <string name="prefs_export_settings_summary">Simpan semua pengaturan, termasuk kata sandi, ke berkas</string>
+    <string name="prefs_import_settings">Impor pengaturan</string>
+    <string name="prefs_import_settings_summary">Ganti pengaturan saat ini dengan pengaturan dari berkas yang diekspor</string>
+    <string name="settings_exported">Pengaturan diekspor</string>
+    <string name="settings_imported">Pengaturan diimpor</string>
+    <string name="settings_export_failed">Gagal mengekspor pengaturan: %1$s</string>
+    <string name="settings_import_failed">Gagal mengimpor pengaturan: %1$s</string>
 </resources>
