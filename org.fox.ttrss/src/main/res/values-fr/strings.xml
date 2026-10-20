@@ -322,4 +322,13 @@
     <string name="prefs_preferred_browser">Navigateur préféré</string>
     <string name="prefs_preferred_browser_summary">Choisissez le navigateur qui ouvre les liens externes. Sélectionner un navigateur spécifique désactive l\'aperçu rapide (onglets personnalisés).</string>
     <string name="prefs_preferred_browser_default">Par défaut du système</string>
+    <string name="prefs_backup">Sauvegarde</string>
+    <string name="prefs_export_settings">Export de la configuration</string>
+    <string name="prefs_export_settings_summary">Sauvegarde de la configuration, avec les mots de passe, dans un fichier</string>
+    <string name="prefs_import_settings">Import de la configuration</string>
+    <string name="prefs_import_settings_summary">Remplacement de la configuration actuelle par celle d\'un fichier exporté</string>
+    <string name="settings_exported">Configuration exportée</string>
+    <string name="settings_imported">Configuration importée</string>
+    <string name="settings_export_failed">Échec de l\'export de la configuration : %1$s</string>
+    <string name="settings_import_failed">Échec de l\'import de la configuration : %1$s</string>
 </resources>

@@ -314,4 +314,13 @@
     <string name="prefs_preferred_browser_default">系统默认</string>
     <string name="open_link">打开链接</string>
     <string name="open_with_app">用应用打开</string>
+    <string name="prefs_backup">备份</string>
+    <string name="prefs_export_settings">导出设置</string>
+    <string name="prefs_export_settings_summary">保存包括密码在内的所有设置到一个文件</string>
+    <string name="prefs_import_settings">导入设置</string>
+    <string name="prefs_import_settings_summary">用来自导出文件的设置替换当前设置</string>
+    <string name="settings_exported">已导出设置</string>
+    <string name="settings_imported">已导入设置</string>
+    <string name="settings_export_failed">导出设置失败：%1$s</string>
+    <string name="settings_import_failed">导入设置失败：%1$s</string>
 </resources>
