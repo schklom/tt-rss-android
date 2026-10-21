@@ -3,7 +3,7 @@
     <string name="login_in_progress">ログイン中…</string>
     <string name="app_name">Tiny Tiny RSS</string>
     <string name="login_need_configure">まずはじめにアプリケーションの設定をしてください。</string>
-    <string name="login_ready">ログイン準備完了</string>
+    <string name="login_ready">ログイン準備完了。</string>
     <string name="login_login">ログイン</string>
     <string name="logout">ログアウト</string>
     <string name="login">ログイン</string>
@@ -302,4 +302,18 @@
     <string name="article_enable_javascript_summary">iframeベースのビデオプレーヤーにはJavaScriptを必要とするものがあります、注意して有効化</string>
     <string name="confirm_catchup_above_title">\"%1s\"より上の記事をすべて既読にしますか？</string>
     <string name="headline_display_mode_split">分割ビュー: 画像 左, テキスト 右</string>
+    <string name="prefs_backup">バックアップ</string>
+    <string name="prefs_export_settings">設定をエクスポート</string>
+    <string name="prefs_import_settings">設定をインポート</string>
+    <string name="prefs_import_settings_summary">エクスポートされたファイルから現在の設定を置換する</string>
+    <string name="settings_exported">設定をエクスポートしました</string>
+    <string name="settings_imported">設定をインポートしました</string>
+    <string name="settings_export_failed">設定のエクスポートに失敗: %1$s</string>
+    <string name="settings_import_failed">設定のインポートに失敗: %1$s</string>
+    <string name="move_between_articles">記事間の移動</string>
+    <string name="move_between_articles_long">左右のスワイプで記事をナビゲート</string>
+    <string name="video_player_open">ビデオを開く</string>
+    <string name="open_link">リンクを開く</string>
+    <string name="open_with_app">アプリで開く</string>
+    <string name="prefs_export_settings_summary">パスワードを含むすべての設定をファイルに保存する</string>
 </resources>
